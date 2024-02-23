@@ -1,0 +1,750 @@
+2024-02-02 02:21:56: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-02 02:21:56: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-02 02:21:56: Info: Loading startup files...
+2024-02-02 02:21:56: Info: Loading plugins...
+2024-02-02 02:21:59: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-02 02:21:59: Info: main: tid=19: CONNECTED: 10.0.20.116
+2024-02-02 03:25:39: Info: sql: tid=19: MySQL Error 2006: MySQL server has gone away, SQL: show global variables like '%sql%'
+2024-02-02 05:14:48: Error: Unknown command '\
+'
+2024-02-02 05:14:55: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-02 05:14:55: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-02 05:14:55: Info: Loading startup files...
+2024-02-02 05:14:55: Info: Loading plugins...
+2024-02-02 05:14:56: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-02 05:14:56: Info: main: tid=38: CONNECTED: 10.0.20.116
+2024-02-02 05:16:30: Info: sql: tid=38: MySQL Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exit' at line 1, SQL: exit
+
+2024-02-05 00:30:21: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 00:30:21: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 00:30:21: Info: Loading startup files...
+2024-02-05 00:30:21: Info: Loading plugins...
+2024-02-05 00:30:22: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 00:30:22: Info: main: tid=67: CONNECTED: 10.0.20.116
+2024-02-05 00:30:28: Info: sql: tid=67: MySQL Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databaes' at line 1, SQL: show databaes
+2024-02-05 05:02:57: Info: sql: tid=67: MySQL Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ls' at line 1, SQL: ls
+
+2024-02-05 05:02:59: Info: sql: tid=67: MySQL Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'quit' at line 1, SQL: quit
+
+2024-02-05 05:03:03: Info: sql: tid=67: MySQL Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exit' at line 1, SQL: exit
+
+2024-02-05 05:44:25: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:44:25: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:44:25: Info: Loading startup files...
+2024-02-05 05:44:25: Info: Loading plugins...
+2024-02-05 05:47:08: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:47:08: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:47:08: Info: Loading startup files...
+2024-02-05 05:47:08: Info: Loading plugins...
+2024-02-05 05:47:12: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 05:47:12: Info: main: tid=36: CONNECTED: 10.0.10.96
+2024-02-05 05:47:14: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 05:47:17: Info: js: tid=36: MySQL Error 1142 (42000): SELECT command denied to user 'repl'@'mds-vm02.operatorsubnet.ocidevcluster.oraclevcn.com' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-02-05 05:47:17: Info: js: tid=36: MySQL Error 1142 (42000): SELECT command denied to user 'repl'@'mds-vm02.operatorsubnet.ocidevcluster.oraclevcn.com' for table 'func', SQL: SELECT name FROM mysql.func
+2024-02-05 05:47:17: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142 (42000): SELECT command denied to user 'repl'@'mds-vm02.operatorsubnet.ocidevcluster.oraclevcn.com' for table 'func'
+2024-02-05 05:47:17: Info: js: tid=36: MySQL Error 1227 (42000): Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-02-05 05:47:26: Info: sql: tid=36: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'quit' at line 1, SQL: quit
+
+2024-02-05 05:47:34: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:47:34: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:47:34: Info: Loading startup files...
+2024-02-05 05:47:34: Info: Loading plugins...
+2024-02-05 05:47:34: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 05:47:34: Info: main: tid=37: CONNECTED: 10.0.10.96
+2024-02-05 05:47:34: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 05:47:34: Error: No operation specified for object 'util'
+2024-02-05 05:47:52: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:47:52: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:47:52: Info: Loading startup files...
+2024-02-05 05:47:52: Info: Loading plugins...
+2024-02-05 05:47:52: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 05:47:52: Info: main: tid=38: CONNECTED: 10.0.10.96
+2024-02-05 05:47:52: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 05:47:52: Error: Invalid operation for util object: copyschema
+2024-02-05 05:48:20: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:48:20: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:48:20: Info: Loading startup files...
+2024-02-05 05:48:20: Info: Loading plugins...
+2024-02-05 05:48:20: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 05:48:20: Info: main: tid=39: CONNECTED: 10.0.10.96
+2024-02-05 05:48:20: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 05:48:20: Error: No operation specified for object 'util'
+2024-02-05 05:48:42: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:48:42: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:48:42: Info: Loading startup files...
+2024-02-05 05:48:42: Info: Loading plugins...
+2024-02-05 05:48:42: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 05:48:42: Info: main: tid=41: CONNECTED: 10.0.10.96
+2024-02-05 05:48:42: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 05:48:42: Error: Invalid operation for util object: help
+2024-02-05 05:48:49: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:48:49: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:48:49: Info: Loading startup files...
+2024-02-05 05:48:49: Info: Loading plugins...
+2024-02-05 05:48:49: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 05:48:49: Info: main: tid=42: CONNECTED: 10.0.10.96
+2024-02-05 05:48:49: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 05:48:49: Error: There is no object registered under name 'util.help'
+2024-02-05 05:49:24: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:49:24: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:49:24: Info: Loading startup files...
+2024-02-05 05:49:24: Info: Loading plugins...
+2024-02-05 05:49:24: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 05:49:24: Info: main: tid=453: CONNECTED: 10.0.20.116
+2024-02-05 05:49:48: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:49:48: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:49:48: Info: Loading startup files...
+2024-02-05 05:49:48: Info: Loading plugins...
+2024-02-05 05:49:54: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-05 05:49:54: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:49:54: Info: Loading startup files...
+2024-02-05 05:49:54: Info: Loading plugins...
+2024-02-05 05:55:55: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 05:55:55: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:55:55: Info: Loading startup files...
+2024-02-05 05:55:55: Info: Loading plugins...
+2024-02-05 05:56:00: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 05:56:00: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:56:00: Info: Loading startup files...
+2024-02-05 05:56:00: Info: Loading plugins...
+2024-02-05 05:56:00: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 05:56:00: Info: main: tid=461: CONNECTED: 10.0.20.116
+2024-02-05 05:57:51: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 05:57:51: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 05:57:51: Info: Loading startup files...
+2024-02-05 05:57:51: Info: Loading plugins...
+2024-02-05 05:57:51: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 05:57:51: Info: main: tid=43: CONNECTED: 10.0.10.96
+2024-02-05 05:57:51: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 05:57:51: Info: Copy options: {"ignoreVersion":true}
+2024-02-05 05:57:51: Error: Argument connectionData: Invalid connection options, expected either a URI or a Connection Options Dictionary
+2024-02-05 06:01:20: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:01:20: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:01:20: Info: Loading startup files...
+2024-02-05 06:01:20: Info: Loading plugins...
+2024-02-05 06:01:20: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:01:20: Info: main: tid=44: CONNECTED: 10.0.10.96
+2024-02-05 06:01:20: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:01:20: Info: Copy options: {"ignoreVersion":true}
+2024-02-05 06:01:20: Error: Argument connectionData: Invalid connection options, expected either a URI or a Connection Options Dictionary
+2024-02-05 06:02:06: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:02:06: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:02:06: Info: Loading startup files...
+2024-02-05 06:02:06: Info: Loading plugins...
+2024-02-05 06:02:06: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:02:06: Info: main: tid=45: CONNECTED: 10.0.10.96
+2024-02-05 06:02:06: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:02:06: Error: The following arguments are invalid: —skipBinlog=true, —dryRun=false, —threads=8
+2024-02-05 06:02:34: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:02:34: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:02:34: Info: Loading startup files...
+2024-02-05 06:02:34: Info: Loading plugins...
+2024-02-05 06:02:34: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:02:34: Info: main: tid=46: CONNECTED: 10.0.10.96
+2024-02-05 06:02:34: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:02:34: Error: The following argument is invalid: —threads=8
+2024-02-05 06:02:42: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:02:42: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:02:42: Info: Loading startup files...
+2024-02-05 06:02:42: Info: Loading plugins...
+2024-02-05 06:02:42: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:02:42: Info: main: tid=47: CONNECTED: 10.0.10.96
+2024-02-05 06:02:42: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:02:42: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:02:44: Error: Cancelled
+2024-02-05 06:03:02: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:03:02: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:03:02: Info: Loading startup files...
+2024-02-05 06:03:02: Info: Loading plugins...
+2024-02-05 06:03:02: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:03:02: Info: main: tid=48: CONNECTED: 10.0.10.96
+2024-02-05 06:03:02: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:03:02: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:03:02: Error: Argument connectionData: Invalid connection options, expected either a URI or a Connection Options Dictionary
+2024-02-05 06:03:53: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:03:53: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:03:53: Info: Loading startup files...
+2024-02-05 06:03:53: Info: Loading plugins...
+2024-02-05 06:03:53: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 06:03:53: Info: main: tid=472: CONNECTED: 10.0.20.116
+2024-02-05 06:04:05: Info: sql: tid=472: MySQL Error 1227: Access denied; you need (at least one of) the SUPER or SYSTEM_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET GLOBAL local_infile = 1
+2024-02-05 06:10:28: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:10:28: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:10:28: Info: Loading startup files...
+2024-02-05 06:10:28: Info: Loading plugins...
+2024-02-05 06:10:28: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:10:28: Info: main: tid=49: CONNECTED: 10.0.10.96
+2024-02-05 06:10:28: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:10:28: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:10:28: Error: Argument connectionData: Invalid connection options, expected either a URI or a Connection Options Dictionary
+2024-02-05 06:12:19: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:12:19: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:12:19: Info: Loading startup files...
+2024-02-05 06:12:19: Info: Loading plugins...
+2024-02-05 06:12:19: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:12:19: Info: main: tid=50: CONNECTED: 10.0.10.96
+2024-02-05 06:12:19: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:12:19: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:12:19: Error: Argument connectionData: Invalid connection options, expected either a URI or a Connection Options Dictionary
+2024-02-05 06:14:19: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:14:19: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:14:19: Info: Loading startup files...
+2024-02-05 06:14:19: Info: Loading plugins...
+2024-02-05 06:14:19: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:14:19: Info: main: tid=51: CONNECTED: 10.0.10.96
+2024-02-05 06:14:19: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:14:19: Error: Argument error at '{"scheme":"employees","user":"root", "host":"10.0.20.116"}': String expected, but value is Map
+2024-02-05 06:14:46: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:14:46: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:14:46: Info: Loading startup files...
+2024-02-05 06:14:46: Info: Loading plugins...
+2024-02-05 06:14:46: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:14:46: Info: main: tid=52: CONNECTED: 10.0.10.96
+2024-02-05 06:14:46: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:14:46: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:14:46: Error: Argument connectionData: Invalid connection options, expected either a URI or a Connection Options Dictionary
+2024-02-05 06:15:32: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:15:32: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:15:32: Info: Loading startup files...
+2024-02-05 06:15:32: Info: Loading plugins...
+2024-02-05 06:15:32: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:15:32: Info: main: tid=53: CONNECTED: 10.0.10.96
+2024-02-05 06:15:32: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:15:32: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:15:32: Error: Argument connectionData: Invalid connection options, expected either a URI or a Connection Options Dictionary
+2024-02-05 06:16:02: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:16:02: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:16:02: Info: Loading startup files...
+2024-02-05 06:16:02: Info: Loading plugins...
+2024-02-05 06:16:02: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:16:02: Info: main: tid=54: CONNECTED: 10.0.10.96
+2024-02-05 06:16:02: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:16:02: Error: Invalid operation for util object: copySchemas-scheme:employees
+2024-02-05 06:16:16: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:16:16: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:16:16: Info: Loading startup files...
+2024-02-05 06:16:16: Info: Loading plugins...
+2024-02-05 06:16:16: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:16:16: Info: main: tid=55: CONNECTED: 10.0.10.96
+2024-02-05 06:16:16: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:16:16: Error: Invalid operation for util object: copySchemas=scheme:employees
+2024-02-05 06:17:41: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:17:41: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:17:41: Info: Loading startup files...
+2024-02-05 06:17:41: Info: Loading plugins...
+2024-02-05 06:17:41: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:17:41: Info: main: tid=56: CONNECTED: 10.0.10.96
+2024-02-05 06:17:41: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:17:41: Error: Invalid operation for util object: copySchemas={"scheme":"employees","user":"root","host":"10.0.20.116"}
+2024-02-05 06:18:57: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:18:57: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:18:58: Info: Loading startup files...
+2024-02-05 06:18:58: Info: Loading plugins...
+2024-02-05 06:18:58: Info: Connecting to MySQL at: repl@10.0.10.96
+2024-02-05 06:18:58: Info: main: tid=57: CONNECTED: 10.0.10.96
+2024-02-05 06:18:58: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:22:01: Info: Copy options: {"dry_run":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:22:14: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:22:14: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 06:22:14: Info: util.copySchemas(): tid=494: CONNECTED: 10.0.20.116
+2024-02-05 06:22:37: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:22:37: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:22:37: Info: Loading startup files...
+2024-02-05 06:22:37: Info: Loading plugins...
+2024-02-05 06:22:43: Info: Connecting to MySQL at: root@10.0.10.96
+2024-02-05 06:22:45: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:22:45: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:22:45: Info: Loading startup files...
+2024-02-05 06:22:45: Info: Loading plugins...
+2024-02-05 06:22:48: Info: Connecting to MySQL at: root@10.0.10.96
+2024-02-05 06:23:02: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:23:02: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:23:02: Info: Loading startup files...
+2024-02-05 06:23:02: Info: Loading plugins...
+2024-02-05 06:23:06: Info: Connecting to MySQL at: root@10.0.10.96
+2024-02-05 06:24:35: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:24:35: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:24:35: Info: Loading startup files...
+2024-02-05 06:24:35: Info: Loading plugins...
+2024-02-05 06:24:37: Info: Connecting to MySQL at: admin@10.0.10.96
+2024-02-05 06:24:48: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 06:24:48: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 06:24:48: Info: Loading startup files...
+2024-02-05 06:24:48: Info: Loading plugins...
+2024-02-05 06:24:54: Info: Connecting to MySQL at: admin@10.0.10.96
+2024-02-05 06:24:54: Info: main: tid=63: CONNECTED: 10.0.10.96
+2024-02-05 06:24:56: Info: Now tracking 'sql_mode' system variable.
+2024-02-05 06:25:17: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:25:17: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=499: CONNECTED: 10.0.20.116
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=499: MySQL Error 1227: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET @@SESSION.sql_generate_invisible_primary_key=0
+2024-02-05 06:25:17: Warning: The current user cannot set the sql_generate_invisible_primary_key session variable: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=64: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Source server: 5.7.44-log MySQL Community Server (GPL)
+2024-02-05 06:25:17: Info: SRC: Backup lock is not supported in MySQL 5.7 and DDL changes will not be blocked. The dump may fail with an error if schema changes are made while dumping.
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=65: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=66: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=67: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=68: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=69: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=70: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=71: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:25:17: Info: util.copySchemas(): tid=72: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:25:17: Info: Initializing - done, duration: 0.092718 seconds
+2024-02-05 06:25:17: Info: Gathering information - done, duration: 0.017693 seconds
+2024-02-05 06:25:17: Info: SRC: When migrating to MySQL HeatWave Service, please always use the latest available version of MySQL Shell.
+2024-02-05 06:25:17: Info: SRC: MySQL Server 5.7 detected, please consider upgrading to 8.0 first.
+2024-02-05 06:25:17: Info: SRC: No fatal errors were found that would prevent an upgrade, but some potential issues were detected. Please ensure that the reported issues are not significant before upgrading.
+2024-02-05 06:25:17: Error: SRC: View `employees`.`dept_emp_latest_date` - definition uses DEFINER clause set to user `root`@`localhost` which can only be executed by this user or a user with SET_ANY_DEFINER, SET_USER_ID or SUPER privileges (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:25:17: Error: SRC: View `employees`.`dept_emp_latest_date` - definition does not use SQL SECURITY INVOKER characteristic, which is mandatory when the DEFINER clause is omitted or removed (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:25:17: Error: SRC: View `employees`.`current_dept_emp` - definition uses DEFINER clause set to user `root`@`localhost` which can only be executed by this user or a user with SET_ANY_DEFINER, SET_USER_ID or SUPER privileges (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:25:17: Error: SRC: View `employees`.`current_dept_emp` - definition does not use SQL SECURITY INVOKER characteristic, which is mandatory when the DEFINER clause is omitted or removed (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:25:17: Info: Validating MySQL HeatWave Service compatibility - done, duration: 0.011147 seconds
+2024-02-05 06:26:02: Info: js: tid=63: MySQL Error 1146 (42S02): Table 'performance_schema.user_defined_functions' doesn't exist, SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-02-05 06:27:03: Info: sql: tid=63: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'util.copySchemas(['employees'], 'admin@10.0.20.116', {dryRun:false, threads:8, i' at line 1, SQL: util.copySchemas(['employees'], 'admin@10.0.20.116', {dryRun:false, threads:8, ignoreVersion:true, skipBinlog:true})
+
+2024-02-05 06:27:10: Info: Copy options: {"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:27:10: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=502: CONNECTED: 10.0.20.116
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=502: MySQL Error 1227: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET @@SESSION.sql_generate_invisible_primary_key=0
+2024-02-05 06:27:10: Warning: The current user cannot set the sql_generate_invisible_primary_key session variable: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=73: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:10: Info: Source server: 5.7.44-log MySQL Community Server (GPL)
+2024-02-05 06:27:10: Info: SRC: Backup lock is not supported in MySQL 5.7 and DDL changes will not be blocked. The dump may fail with an error if schema changes are made while dumping.
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=74: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=75: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=76: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=77: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=78: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:10: Info: util.copySchemas(): tid=79: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:10: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:11: Info: util.copySchemas(): tid=80: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:11: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:27:11: Info: util.copySchemas(): tid=81: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:27:11: Info: Initializing - done, duration: 0.091950 seconds
+2024-02-05 06:27:11: Info: Gathering information - done, duration: 0.015756 seconds
+2024-02-05 06:27:11: Info: SRC: When migrating to MySQL HeatWave Service, please always use the latest available version of MySQL Shell.
+2024-02-05 06:27:11: Info: SRC: MySQL Server 5.7 detected, please consider upgrading to 8.0 first.
+2024-02-05 06:27:11: Info: SRC: No fatal errors were found that would prevent an upgrade, but some potential issues were detected. Please ensure that the reported issues are not significant before upgrading.
+2024-02-05 06:27:11: Error: SRC: View `employees`.`dept_emp_latest_date` - definition uses DEFINER clause set to user `root`@`localhost` which can only be executed by this user or a user with SET_ANY_DEFINER, SET_USER_ID or SUPER privileges (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:27:11: Error: SRC: View `employees`.`dept_emp_latest_date` - definition does not use SQL SECURITY INVOKER characteristic, which is mandatory when the DEFINER clause is omitted or removed (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:27:11: Error: SRC: View `employees`.`current_dept_emp` - definition uses DEFINER clause set to user `root`@`localhost` which can only be executed by this user or a user with SET_ANY_DEFINER, SET_USER_ID or SUPER privileges (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:27:11: Error: SRC: View `employees`.`current_dept_emp` - definition does not use SQL SECURITY INVOKER characteristic, which is mandatory when the DEFINER clause is omitted or removed (fix this with 'strip_definers' compatibility option)
+2024-02-05 06:27:11: Info: Validating MySQL HeatWave Service compatibility - done, duration: 0.010422 seconds
+2024-02-05 06:27:38: Info: sql: tid=63: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'views' at line 1, SQL: show views 
+2024-02-05 06:29:53: Info: Copy options: {"compatibility":["strip_definers"],"dryRun":false,"ignoreVersion":true,"skipBinlog":true,"threads":8}
+2024-02-05 06:29:53: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=507: CONNECTED: 10.0.20.116
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=507: MySQL Error 1227: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET @@SESSION.sql_generate_invisible_primary_key=0
+2024-02-05 06:29:53: Warning: The current user cannot set the sql_generate_invisible_primary_key session variable: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=82: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Source server: 5.7.44-log MySQL Community Server (GPL)
+2024-02-05 06:29:53: Info: SRC: Backup lock is not supported in MySQL 5.7 and DDL changes will not be blocked. The dump may fail with an error if schema changes are made while dumping.
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=83: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=84: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=85: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=86: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=87: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=88: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=89: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:29:53: Info: util.copySchemas(): tid=90: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:53: Info: Initializing - done, duration: 0.092596 seconds
+2024-02-05 06:29:53: Info: Gathering information - done, duration: 0.015809 seconds
+2024-02-05 06:29:53: Info: SRC: When migrating to MySQL HeatWave Service, please always use the latest available version of MySQL Shell.
+2024-02-05 06:29:53: Info: SRC: MySQL Server 5.7 detected, please consider upgrading to 8.0 first.
+2024-02-05 06:29:54: Info: SRC: No fatal errors were found that would prevent an upgrade, but some potential issues were detected. Please ensure that the reported issues are not significant before upgrading.
+2024-02-05 06:29:54: Info: SRC: View `employees`.`dept_emp_latest_date` had definer clause removed
+2024-02-05 06:29:54: Info: SRC: View `employees`.`dept_emp_latest_date` had SQL SECURITY characteristic set to INVOKER
+2024-02-05 06:29:54: Info: SRC: View `employees`.`current_dept_emp` had definer clause removed
+2024-02-05 06:29:54: Info: SRC: View `employees`.`current_dept_emp` had SQL SECURITY characteristic set to INVOKER
+2024-02-05 06:29:54: Info: Validating MySQL HeatWave Service compatibility - done, duration: 0.009982 seconds
+2024-02-05 06:29:54: Info: [Worker000]: Writing metadata for schema `employees`
+2024-02-05 06:29:54: Info: [Worker007]: Writing DDL for schema `employees`
+2024-02-05 06:29:54: Info: Preparing data dump of table `employees`.`salaries`
+2024-02-05 06:29:54: Info: The data dump of table `employees`.`salaries` will be chunked using columns `emp_no`,`from_date`
+2024-02-05 06:29:54: Info: [Worker002]: Writing DDL for table `employees`.`salaries`
+2024-02-05 06:29:54: Info: [Worker003]: Writing DDL for table `employees`.`employees`
+2024-02-05 06:29:54: Info: [Worker004]: Writing DDL for table `employees`.`dept_manager`
+2024-02-05 06:29:54: Info: [Worker005]: Writing DDL for table `employees`.`titles`
+2024-02-05 06:29:54: Info: [Worker007]: Writing DDL for table `employees`.`departments`
+2024-02-05 06:29:54: Info: [Worker001]: Writing DDL for view `employees`.`current_dept_emp`
+2024-02-05 06:29:54: Info: Preparing data dump of table `employees`.`employees`
+2024-02-05 06:29:54: Info: The data dump of table `employees`.`employees` will be chunked using column `emp_no`
+2024-02-05 06:29:54: Info: Preparing data dump of table `employees`.`dept_manager`
+2024-02-05 06:29:54: Info: The data dump of table `employees`.`dept_manager` will be chunked using columns `emp_no`,`dept_no`
+2024-02-05 06:29:54: Info: Preparing data dump of table `employees`.`titles`
+2024-02-05 06:29:54: Info: The data dump of table `employees`.`titles` will be chunked using columns `emp_no`,`title`,`from_date`
+2024-02-05 06:29:54: Info: Preparing data dump of table `employees`.`departments`
+2024-02-05 06:29:54: Info: The data dump of table `employees`.`departments` will be chunked using column `dept_no`
+2024-02-05 06:29:54: Info: Preparing data dump of table `employees`.`dept_emp`
+2024-02-05 06:29:54: Info: The data dump of table `employees`.`dept_emp` will be chunked using columns `emp_no`,`dept_no`
+2024-02-05 06:29:54: Info: SRC: Progress information uses estimated values and may not be accurate.
+2024-02-05 06:29:54: Info: [Worker000]: Writing DDL for view `employees`.`dept_emp_latest_date`
+2024-02-05 06:29:54: Info: [Worker006]: Writing DDL for table `employees`.`dept_emp`
+2024-02-05 06:29:54: Info: [Worker005]: Writing metadata for table `employees`.`salaries`
+2024-02-05 06:29:54: Info: [Worker005]: Writing metadata for table `employees`.`employees`
+2024-02-05 06:29:54: Info: [Worker005]: Writing metadata for table `employees`.`dept_manager`
+2024-02-05 06:29:54: Info: [Worker002]: Writing metadata for table `employees`.`titles`
+2024-02-05 06:29:54: Info: [Worker005]: Writing metadata for table `employees`.`departments`
+2024-02-05 06:29:54: Info: [Worker005]: Writing metadata for table `employees`.`dept_emp`
+2024-02-05 06:29:54: Info: [Worker005]: Chunking `employees`.`employees`, rows: 299157, average row length: 50, rows per chunk: 1280000
+2024-02-05 06:29:54: Info: [Worker002]: Chunking `employees`.`salaries`, rows: 2838426, average row length: 35, rows per chunk: 1828571
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_manager`, rows: 24, average row length: 682, rows per chunk: 93841
+2024-02-05 06:29:54: Info: [Worker003]: Chunking `employees`.`titles`, rows: 442664, average row length: 46, rows per chunk: 1391304
+2024-02-05 06:29:54: Info: [Worker005]: Chunking `employees`.`employees`, using columns: `emp_no` (Integer), min: [10001], max: [499999]
+2024-02-05 06:29:54: Info: [Worker005]: Chunking `employees`.`employees` using integer algorithm
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_manager`, using columns: `emp_no` (Integer), `dept_no` (String), min: [110022, d001], max: [111939, d009]
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_manager` using integer algorithm
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_manager` using integer algorithm with constant step
+2024-02-05 06:29:54: Info: [Worker005]: Chunking `employees`.`employees` using integer algorithm with constant step
+2024-02-05 06:29:54: Info: [Worker004]: Data dump for table `employees`.`dept_manager` will be written to 1 file
+2024-02-05 06:29:54: Info: [Worker005]: Data dump for table `employees`.`employees` will be written to 1 file
+2024-02-05 06:29:54: Info: [Worker005]: Chunking `employees`.`departments`, rows: 9, average row length: 1820, rows per chunk: 35164
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_emp`, rows: 331570, average row length: 36, rows per chunk: 1777777
+2024-02-05 06:29:54: Info: [Worker003]: Chunking `employees`.`titles`, using columns: `emp_no` (Integer), `title` (String), `from_date` (Date), min: [10001, Senior Engineer, 1986-06-26], max: [499999, Engineer, 1997-11-30]
+2024-02-05 06:29:54: Info: [Worker003]: Chunking `employees`.`titles` using integer algorithm
+2024-02-05 06:29:54: Info: [Worker003]: Chunking `employees`.`titles` using integer algorithm with constant step
+2024-02-05 06:29:54: Info: [Worker003]: Data dump for table `employees`.`titles` will be written to 1 file
+2024-02-05 06:29:54: Info: [Worker002]: Chunking `employees`.`salaries`, using columns: `emp_no` (Integer), `from_date` (Date), min: [10001, 1986-06-26], max: [499999, 2001-11-29]
+2024-02-05 06:29:54: Info: [Worker002]: Chunking `employees`.`salaries` using integer algorithm
+2024-02-05 06:29:54: Info: [Worker002]: Chunking `employees`.`salaries` using integer algorithm with constant step
+2024-02-05 06:29:54: Info: [Worker002]: Data dump for table `employees`.`salaries` will be written to 1 file
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_emp`, using columns: `emp_no` (Integer), `dept_no` (String), min: [10001, d005], max: [499999, d004]
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_emp` using integer algorithm
+2024-02-05 06:29:54: Info: [Worker004]: Chunking `employees`.`dept_emp` using integer algorithm with constant step
+2024-02-05 06:29:54: Info: [Worker004]: Data dump for table `employees`.`dept_emp` will be written to 1 file
+2024-02-05 06:29:54: Info: [Worker005]: Chunking `employees`.`departments`, using columns: `dept_no` (String), min: [d001], max: [d009]
+2024-02-05 06:29:54: Info: [Worker005]: Chunking `employees`.`departments` using non-integer algorithm
+2024-02-05 06:29:54: Info: [Worker005]: Data dump for table `employees`.`departments` will be written to 1 file
+2024-02-05 06:29:54: Info: @.done.json: not found
+2024-02-05 06:29:54: Info: TGT: Dump is still ongoing, data will be loaded as it becomes available.
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: TGT: Destination MySQL version is newer than the one where the dump was created.
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=508: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=508: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Error: TGT: [Worker000]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=509: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=509: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Error: TGT: [Worker005]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=513: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=513: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Error: TGT: [Worker001]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=511: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=511: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Error: TGT: [Worker004]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=514: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=512: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=514: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Error: TGT: [Worker003]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=512: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=515: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=515: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=510: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Error: TGT: [Worker002]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=510: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=516: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:29:54: Error: TGT: [Worker006]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=516: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET sql_log_bin=0
+2024-02-05 06:29:54: Error: TGT: [Worker007]: Error opening connection to MySQL: MYSQLSH 53004: 'SET sql_log_bin=0' failed with error: MySQL Error 1227 (42000): Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:29:54: Info: util.copySchemas(): tid=91: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:29:54: Info: Writing schema metadata - done, duration: 0.250974 seconds
+2024-02-05 06:29:54: Info: Writing DDL - done, duration: 0.251064 seconds
+2024-02-05 06:29:54: Info: Writing table metadata - done, duration: 0.251048 seconds
+2024-02-05 06:31:13: Info: Copy options: {"compatibility":["strip_definers"],"dryRun":false,"ignoreVersion":true,"threads":8}
+2024-02-05 06:31:13: Info: Connecting to MySQL at: admin@10.0.20.116
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=519: CONNECTED: 10.0.20.116
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=519: MySQL Error 1227: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation, SQL: SET @@SESSION.sql_generate_invisible_primary_key=0
+2024-02-05 06:31:13: Warning: The current user cannot set the sql_generate_invisible_primary_key session variable: Access denied; you need (at least one of) the SUPER, SYSTEM_VARIABLES_ADMIN or SESSION_VARIABLES_ADMIN privilege(s) for this operation
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=92: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Source server: 5.7.44-log MySQL Community Server (GPL)
+2024-02-05 06:31:13: Info: SRC: Backup lock is not supported in MySQL 5.7 and DDL changes will not be blocked. The dump may fail with an error if schema changes are made while dumping.
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=93: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=94: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=95: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=96: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=97: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=98: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=99: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.10.96:3306?max-allowed-packet=1073741824&net-read-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=100: CONNECTED: 10.0.10.96:3306
+2024-02-05 06:31:13: Info: Initializing - done, duration: 0.091562 seconds
+2024-02-05 06:31:13: Info: Gathering information - done, duration: 0.015498 seconds
+2024-02-05 06:31:13: Info: SRC: When migrating to MySQL HeatWave Service, please always use the latest available version of MySQL Shell.
+2024-02-05 06:31:13: Info: SRC: MySQL Server 5.7 detected, please consider upgrading to 8.0 first.
+2024-02-05 06:31:13: Info: SRC: No fatal errors were found that would prevent an upgrade, but some potential issues were detected. Please ensure that the reported issues are not significant before upgrading.
+2024-02-05 06:31:13: Info: SRC: View `employees`.`dept_emp_latest_date` had definer clause removed
+2024-02-05 06:31:13: Info: SRC: View `employees`.`dept_emp_latest_date` had SQL SECURITY characteristic set to INVOKER
+2024-02-05 06:31:13: Info: SRC: View `employees`.`current_dept_emp` had definer clause removed
+2024-02-05 06:31:13: Info: SRC: View `employees`.`current_dept_emp` had SQL SECURITY characteristic set to INVOKER
+2024-02-05 06:31:13: Info: Validating MySQL HeatWave Service compatibility - done, duration: 0.009366 seconds
+2024-02-05 06:31:13: Info: [Worker000]: Writing metadata for schema `employees`
+2024-02-05 06:31:13: Info: Preparing data dump of table `employees`.`salaries`
+2024-02-05 06:31:13: Info: The data dump of table `employees`.`salaries` will be chunked using columns `emp_no`,`from_date`
+2024-02-05 06:31:13: Info: Preparing data dump of table `employees`.`employees`
+2024-02-05 06:31:13: Info: The data dump of table `employees`.`employees` will be chunked using column `emp_no`
+2024-02-05 06:31:13: Info: Preparing data dump of table `employees`.`dept_manager`
+2024-02-05 06:31:13: Info: The data dump of table `employees`.`dept_manager` will be chunked using columns `emp_no`,`dept_no`
+2024-02-05 06:31:13: Info: Preparing data dump of table `employees`.`titles`
+2024-02-05 06:31:13: Info: The data dump of table `employees`.`titles` will be chunked using columns `emp_no`,`title`,`from_date`
+2024-02-05 06:31:13: Info: Preparing data dump of table `employees`.`departments`
+2024-02-05 06:31:13: Info: The data dump of table `employees`.`departments` will be chunked using column `dept_no`
+2024-02-05 06:31:13: Info: [Worker001]: Writing DDL for view `employees`.`current_dept_emp`
+2024-02-05 06:31:13: Info: Preparing data dump of table `employees`.`dept_emp`
+2024-02-05 06:31:13: Info: The data dump of table `employees`.`dept_emp` will be chunked using columns `emp_no`,`dept_no`
+2024-02-05 06:31:13: Info: SRC: Progress information uses estimated values and may not be accurate.
+2024-02-05 06:31:13: Info: [Worker003]: Writing DDL for table `employees`.`employees`
+2024-02-05 06:31:13: Info: [Worker004]: Writing DDL for table `employees`.`dept_manager`
+2024-02-05 06:31:13: Info: [Worker002]: Writing DDL for table `employees`.`salaries`
+2024-02-05 06:31:13: Info: [Worker000]: Writing DDL for view `employees`.`dept_emp_latest_date`
+2024-02-05 06:31:13: Info: [Worker006]: Writing DDL for schema `employees`
+2024-02-05 06:31:13: Info: [Worker006]: Writing DDL for table `employees`.`titles`
+2024-02-05 06:31:13: Info: [Worker005]: Writing DDL for table `employees`.`departments`
+2024-02-05 06:31:13: Info: [Worker007]: Writing DDL for table `employees`.`dept_emp`
+2024-02-05 06:31:13: Info: [Worker003]: Writing metadata for table `employees`.`salaries`
+2024-02-05 06:31:13: Info: [Worker003]: Writing metadata for table `employees`.`employees`
+2024-02-05 06:31:13: Info: [Worker003]: Writing metadata for table `employees`.`dept_manager`
+2024-02-05 06:31:13: Info: [Worker003]: Writing metadata for table `employees`.`titles`
+2024-02-05 06:31:13: Info: [Worker004]: Writing metadata for table `employees`.`departments`
+2024-02-05 06:31:13: Info: [Worker003]: Writing metadata for table `employees`.`dept_emp`
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`salaries`, rows: 2838426, average row length: 35, rows per chunk: 1828571
+2024-02-05 06:31:13: Info: [Worker003]: Chunking `employees`.`employees`, rows: 299157, average row length: 50, rows per chunk: 1280000
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_manager`, rows: 24, average row length: 682, rows per chunk: 93841
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`salaries`, using columns: `emp_no` (Integer), `from_date` (Date), min: [10001, 1986-06-26], max: [499999, 2001-11-29]
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`salaries` using integer algorithm
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`salaries` using integer algorithm with constant step
+2024-02-05 06:31:13: Info: [Worker004]: Data dump for table `employees`.`salaries` will be written to 1 file
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`titles`, rows: 442664, average row length: 46, rows per chunk: 1391304
+2024-02-05 06:31:13: Info: [Worker003]: Chunking `employees`.`employees`, using columns: `emp_no` (Integer), min: [10001], max: [499999]
+2024-02-05 06:31:13: Info: [Worker003]: Chunking `employees`.`employees` using integer algorithm
+2024-02-05 06:31:13: Info: [Worker003]: Chunking `employees`.`employees` using integer algorithm with constant step
+2024-02-05 06:31:13: Info: [Worker003]: Data dump for table `employees`.`employees` will be written to 1 file
+2024-02-05 06:31:13: Info: [Worker003]: Chunking `employees`.`departments`, rows: 9, average row length: 1820, rows per chunk: 35164
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_manager`, using columns: `emp_no` (Integer), `dept_no` (String), min: [110022, d001], max: [111939, d009]
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_manager` using integer algorithm
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_manager` using integer algorithm with constant step
+2024-02-05 06:31:13: Info: [Worker002]: Data dump for table `employees`.`dept_manager` will be written to 1 file
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_emp`, rows: 331570, average row length: 36, rows per chunk: 1777777
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`titles`, using columns: `emp_no` (Integer), `title` (String), `from_date` (Date), min: [10001, Senior Engineer, 1986-06-26], max: [499999, Engineer, 1997-11-30]
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`titles` using integer algorithm
+2024-02-05 06:31:13: Info: [Worker004]: Chunking `employees`.`titles` using integer algorithm with constant step
+2024-02-05 06:31:13: Info: [Worker004]: Data dump for table `employees`.`titles` will be written to 1 file
+2024-02-05 06:31:13: Info: [Worker003]: Chunking `employees`.`departments`, using columns: `dept_no` (String), min: [d001], max: [d009]
+2024-02-05 06:31:13: Info: [Worker003]: Chunking `employees`.`departments` using non-integer algorithm
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_emp`, using columns: `emp_no` (Integer), `dept_no` (String), min: [10001, d005], max: [499999, d004]
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_emp` using integer algorithm
+2024-02-05 06:31:13: Info: [Worker002]: Chunking `employees`.`dept_emp` using integer algorithm with constant step
+2024-02-05 06:31:13: Info: [Worker002]: Data dump for table `employees`.`dept_emp` will be written to 1 file
+2024-02-05 06:31:13: Info: [Worker003]: Data dump for table `employees`.`departments` will be written to 1 file
+2024-02-05 06:31:13: Info: @.done.json: not found
+2024-02-05 06:31:13: Info: TGT: Dump is still ongoing, data will be loaded as it becomes available.
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: TGT: Destination MySQL version is newer than the one where the dump was created.
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: Connecting to MySQL at: mysql://admin@10.0.20.116:3306?local-infile=true&max-allowed-packet=1073741824&net-read-timeout=86400000&net-write-timeout=86400000
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=522: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=521: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: Destination server: 8.0.36-cloud MySQL Enterprise - Cloud
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=520: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=523: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=525: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: Scanning metadata - done, duration: 0.019632 seconds
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=526: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=528: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=524: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: Executing DDL script for schema `employees`
+2024-02-05 06:31:13: Info: util.copySchemas(): tid=527: CONNECTED: 10.0.20.116:3306
+2024-02-05 06:31:13: Info: [Worker001]: Executing DDL script for `employees`.`current_dept_emp` (placeholder for view)
+2024-02-05 06:31:13: Info: [Worker005]: Executing DDL script for `employees`.`titles`
+2024-02-05 06:31:13: Info: [Worker003]: Executing DDL script for `employees`.`dept_emp_latest_date` (placeholder for view)
+2024-02-05 06:31:13: Info: [Worker000]: Executing DDL script for `employees`.`dept_emp`
+2024-02-05 06:31:13: Info: [Worker002]: Executing DDL script for `employees`.`dept_manager`
+2024-02-05 06:31:13: Info: [Worker006]: Executing DDL script for `employees`.`departments`
+2024-02-05 06:31:13: Info: [Worker007]: Executing DDL script for `employees`.`salaries`
+2024-02-05 06:31:13: Info: [Worker004]: Executing DDL script for `employees`.`employees`
+2024-02-05 06:31:13: Info: Executing DDL - done, duration: 0.102659 seconds
+2024-02-05 06:31:13: Info: Executing DDL script for view `employees`.`dept_emp_latest_date`
+2024-02-05 06:31:13: Info: Executing DDL script for view `employees`.`current_dept_emp`
+2024-02-05 06:31:13: Info: Executing view DDL - done, duration: 0.018200 seconds
+2024-02-05 06:31:13: Info: [Worker003]: Dump of `employees`.`departments` (chunk 0) into 'employees@departments@@0.tsv' took 0.182046 seconds, written 9 rows (153 bytes), longest row has 24 bytes
+2024-02-05 06:31:13: Info: [Worker007]: Dump of `employees`.`dept_manager` (chunk 0) into 'employees@dept_manager@@0.tsv' took 0.189627 seconds, written 24 rows (816 bytes), longest row has 34 bytes
+2024-02-05 06:31:13: Info: [Worker002]: employees@departments@@0.tsv: Records: 9  Deleted: 0  Skipped: 0  Warnings: 0 - loading finished in 1 sub-chunks
+2024-02-05 06:31:13: Info: [Worker005]: employees@dept_manager@@0.tsv: Records: 24  Deleted: 0  Skipped: 0  Warnings: 0 - loading finished in 1 sub-chunks
+2024-02-05 06:31:13: Info: Writing schema metadata - done, duration: 0.250086 seconds
+2024-02-05 06:31:13: Info: Writing DDL - done, duration: 0.250267 seconds
+2024-02-05 06:31:13: Info: Writing table metadata - done, duration: 0.250266 seconds
+2024-02-05 06:31:14: Info: [Worker004]: Dump of `employees`.`dept_emp` (chunk 0) into 'employees@dept_emp@@0.tsv' took 0.618786 seconds, written 331603 rows (11175033 bytes), longest row has 34 bytes
+2024-02-05 06:31:14: Info: [Worker000]: Dump of `employees`.`employees` (chunk 0) into 'employees@employees@@0.tsv' took 0.718431 seconds, written 300024 rows (13821993 bytes), longest row has 62 bytes
+2024-02-05 06:31:14: Info: [Worker006]: Dump of `employees`.`titles` (chunk 0) into 'employees@titles@@0.tsv' took 1.536301 seconds, written 443308 rows (17718376 bytes), longest row has 48 bytes
+2024-02-05 06:31:15: Info: [Worker001]: employees@employees@@0.tsv: Records: 300024  Deleted: 0  Skipped: 0  Warnings: 0 - loading finished in 1 sub-chunks
+2024-02-05 06:31:16: Info: [Worker000]: employees@dept_emp@@0.tsv: Records: 331603  Deleted: 0  Skipped: 0  Warnings: 0 - loading finished in 1 sub-chunks
+2024-02-05 06:31:16: Info: [Worker007]: employees@titles@@0.tsv: Records: 443308  Deleted: 0  Skipped: 0  Warnings: 0 - loading finished in 1 sub-chunks
+2024-02-05 06:31:20: Info: [Worker003]: employees@salaries@@0.tsv: Records: 1851249  Deleted: 0  Skipped: 0  Warnings: 0 - flushed sub-chunk 1
+2024-02-05 06:31:23: Info: [Worker005]: Dump of `employees`.`salaries` (chunk 0) into 'employees@salaries@@0.tsv' took 10.218727 seconds, written 2844047 rows (98781181 bytes), longest row has 36 bytes
+2024-02-05 06:31:23: Info: Dumping data - done, duration: 10.222242 seconds
+2024-02-05 06:31:24: Info: [Worker003]: employees@salaries@@0.tsv: Records: 992798  Deleted: 0  Skipped: 0  Warnings: 0 - loading finished in 2 sub-chunks
+2024-02-05 06:31:24: Info: Dump memory is complete
+2024-02-05 06:31:24: Info: Loading data - done, duration: 11.298827 seconds
+2024-02-05 06:31:24: Info: Recreating indexes - done, duration: 11.298589 seconds
+2024-02-05 06:31:24: Info: ---
+Dump_metadata:
+  Binlog_file: binlog.000008
+  Binlog_position: 66375761
+  Executed_GTID_set: |-
+      be2ad196-b37b-11ee-af06-02001701c9b0:24-26,
+      ebf48106-b456-11ee-801e-020017000665:1-185
+
+2024-02-05 07:37:29: Info: sql: tid=63: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JAVASCRIPT AS $$
+  let url = `${path}${search && 
+    !search.startsWith('?') ? ' at line 3, SQL: CREATE FUNCTION construct_url (path VARCHAR(50), 
+search VARCHAR(20)) RETURNS VARCHAR(100) 
+LANGUAGE JAVASCRIPT AS $$
+  let url = `${path}${search && 
+    !search.startsWith('?') ? '?' : ''}${search ?? ''}`;
+  return encodeURI(url);
+$$
+
+
+2024-02-05 07:38:07: Info: sql: tid=63: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JAVASCRIPT AS $$
+  let url = `${path}${search &&
+    !search.startsWith('?') ? '' at line 3, SQL: CREATE FUNCTION construct_url (path VARCHAR(50),
+search VARCHAR(20)) RETURNS VARCHAR(100)
+LANGUAGE JAVASCRIPT AS $$
+  let url = `${path}${search &&
+    !search.startsWith('?') ? '?' : ''}${search ?? ''}`;
+  return encodeURI(url);
+$$
+/
+
+
+
+
+
+
+2024-02-05 07:39:39: Info: sql: tid=63: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JAVASCRIPT AS $$   let url = `${path}${search &&     !search.startsWith('?') ? '' at line 1, SQL: CREATE FUNCTION construct_url (path VARCHAR(50), search VARCHAR(20)) RETURNS VARCHAR(100) LANGUAGE JAVASCRIPT AS $$   let url = `${path}${search &&     !search.startsWith('?') ? '?' : ''}${search ?? ''}`;   return encodeURI(url); $$
+
+2024-02-05 07:42:01: Info: sql: tid=63: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'javascript as $$
+  console.log("hello world!");
+$$
+
+
+call print_js()' at line 2, SQL: create procedure print_js()
+lanuage javascript as $$
+  console.log("hello world!");
+$$
+
+
+call print_js()
+2024-02-05 07:42:11: Info: sql: tid=63: MySQL Error 1065 (42000): Query was empty, SQL: 
+2024-02-05 07:42:47: Info: sql: tid=63: MySQL Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'javascript as $$
+  console.log("hello world!");
+$$' at line 2, SQL: create procedure print_js()
+lanuage javascript as $$
+  console.log("hello world!");
+$$
+
+
+
+
+2024-02-05 08:47:58: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 08:47:58: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 08:47:58: Info: Loading startup files...
+2024-02-05 08:47:58: Info: Loading plugins...
+2024-02-05 08:48:01: Info: Connecting to MySQL at: admin@10.0.20.2
+2024-02-05 08:48:03: Info: mysqlsh   Ver 8.3.0 for Linux on x86_64 - for MySQL 8.3.0 (MySQL Community Server (GPL)) - build 13725054 - commit_id b871a975f78bf8d8cafe15536b5a6e1507c090c7 - product_id el8-x86-64bit rpm
+2024-02-05 08:48:03: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-05 08:48:03: Info: Loading startup files...
+2024-02-05 08:48:03: Info: Loading plugins...
+2024-02-05 08:48:05: Info: Connecting to MySQL at: admin@10.0.20.2
+2024-02-05 08:48:05: Info: main: tid=78: CONNECTED: 10.0.20.2
+2024-02-05 08:50:28: Info: sql: tid=78: MySQL Error 1046: No database selected, SQL: create procedure print_js()
+language javascript as $$
+  console.log("hello world!!");
+$$
+
+2024-02-14 04:35:05: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-14 04:35:05: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-14 04:35:05: Info: Loading startup files...
+2024-02-14 04:35:05: Info: Loading plugins...
+2024-02-20 05:27:30: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-20 05:27:30: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-20 05:27:30: Info: Loading startup files...
+2024-02-20 05:27:30: Info: Loading plugins...
+2024-02-21 13:13:18: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-21 13:13:18: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-21 13:13:18: Info: Loading startup files...
+2024-02-21 13:13:18: Info: Loading plugins...
+2024-02-21 13:13:22: Info: Connecting to MySQL at: root@127.0.0.1
+2024-02-21 13:13:22: Info: main: tid=10: CONNECTED: 127.0.0.1
+2024-02-22 02:35:43: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-22 02:35:43: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-22 02:35:43: Info: Loading startup files...
+2024-02-22 02:35:43: Info: Loading plugins...
+2024-02-22 02:35:52: Info: Connecting to MySQL at: root@localhost
+2024-02-22 02:35:52: Info: main: tid=9: CONNECTED: localhost
+2024-02-22 02:40:27: Info: sql: tid=9: MySQL Error 1054: Unknown column 'rollbacksegmenthistorylistlength' in 'field list', SQL: select rollbacksegmenthistorylistlength, count
+from information_schema.innodb_metrics
+2024-02-22 04:35:49: Info: sql: tid=9: MySQL Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'quit' at line 1, SQL: quit
+
+2024-02-22 04:41:04: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-22 04:41:04: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-22 04:41:04: Info: Loading startup files...
+2024-02-22 04:41:04: Info: Loading plugins...
+2024-02-22 04:41:04: Info: Connecting to MySQL at: root@localhost
+2024-02-22 04:41:04: Info: main: tid=10: CONNECTED: localhost
+2024-02-22 07:13:45: Info: mysqlsh   Ver 8.0.36-commercial for Linux on x86_64 - for MySQL 8.0.36 (MySQL Enterprise Server - Commercial) - build 13717364 - commit_id 5e9f80bc00147fbf02c06825bf4959a7e4a5b195
+2024-02-22 07:13:45: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-02-22 07:13:45: Info: Loading startup files...
+2024-02-22 07:13:45: Info: Loading plugins...
+2024-02-22 07:13:46: Info: Connecting to MySQL at: root@127.0.0.1
+2024-02-22 07:13:46: Info: main: tid=10: CONNECTED: 127.0.0.1
+2024-02-22 14:54:01: Error: Unknown command '\
+'
+2024-02-22 14:54:02: Info: sql: tid=10: MySQL Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'quit' at line 1, SQL: quit
+

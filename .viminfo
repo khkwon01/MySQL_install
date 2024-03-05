@@ -11,21 +11,21 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/mysql
+~MSle0~/connect_mysql
 
 # Command Line History (newest to oldest):
+:wq
+|2,0,1709606966,,"wq"
 :w
-|2,0,1708614080,,"w"
+|2,0,1709606960,,"w"
 :q
-|2,0,1708613950,,"q"
+|2,0,1709561334,,"q"
+:1
+|2,0,1709560691,,"1"
+:se nu
+|2,0,1709531165,,"se nu"
 :se nonu
 |2,0,1708580020,,"se nonu"
-:se nu
-|2,0,1708580017,,"se nu"
-:wq
-|2,0,1708579027,,"wq"
-:1
-|2,0,1708506757,,"1"
 :qw
 |2,0,1708506230,,"qw"
 :q!
@@ -36,6 +36,42 @@
 |2,0,1706702228,,"100"
 
 # Search String History (newest to oldest):
+?/connect_mysql
+|2,1,1709561304,47,"connect_mysql"
+??tee
+|2,1,1709561165,63,"tee"
+?/display_msg
+|2,1,1709560830,47,"display_msg"
+?/load_data
+|2,1,1709560702,47,"load_data"
+?/load_test
+|2,1,1709560695,47,"load_test"
+?/test
+|2,1,1709560405,47,"test"
+?/dialog
+|2,1,1709554320,47,"dialog"
+?/edit
+|2,1,1709554309,47,"edit"
+?/backti
+|2,1,1709554245,47,"backti"
+?/connect
+|2,1,1709554147,47,"connect"
+?/sw_dir
+|2,1,1709553420,47,"sw_dir"
+?/pkg
+|2,1,1709553415,47,"pkg"
+?/pass
+|2,1,1709552417,47,"pass"
+?/load_
+|2,1,1709541092,47,"load_"
+?/AIRPORT
+|2,1,1709540408,47,"AIRPORT"
+?/load_da
+|2,1,1709540163,47,"load_da"
+?/wget
+|2,1,1709540060,47,"wget"
+?/load
+|2,1,1709539751,47,"load"
 ??mysql
 |2,1,1708581621,63,"mysql"
 ??err
@@ -48,16 +84,12 @@
 |2,1,1708506295,47,"find"
 ?/temp
 |2,1,1708504423,47,"temp"
-?/dialog
-|2,1,1708504161,47,"dialog"
 ?/mkdir
 |2,1,1708497157,47,"mkdir"
 ?/unzip
 |2,1,1708411470,47,"unzip"
 ?/TAR
 |2,1,1706834816,47,"TAR"
-?/sw_dir
-|2,1,1706702594,47,"sw_dir"
 ??MOS_LINK_SRV_TAR
 |2,1,1706700070,63,"MOS_LINK_SRV_TAR"
 
@@ -71,366 +103,384 @@
 "0	LINE	0
 	#SELINUX=enforcing
 |3,0,0,1,1,0,1708492647,"#SELINUX=enforcing"
-"1	LINE	0
-	    
-|3,0,1,1,1,0,1708584603,"    "
+""1	LINE	0
+	pkg
+|3,1,1,1,1,0,1709606965,"pkg"
 "2	LINE	0
 	
-|3,0,2,1,1,0,1708584603,""
+|3,0,2,1,1,0,1709606963,""
 "3	LINE	0
-	    display_msg "Connection test result" "${result}"
-|3,0,3,1,1,0,1708584602,"    display_msg \"Connection test result\" \"${result}\""
+	
+|3,0,3,1,1,0,1709553745,""
 "4	LINE	0
-	       msg="The database can't be connect using your db info"
-|3,0,4,1,1,0,1708584462,"       msg=\"The database can't be connect using your db info\""
+	
+|3,0,4,1,1,0,1709542458,""
 "5	LINE	0
-	    echo "$(date) - INFO - DB INFO - ${msg}" >> ${log_file}
-|3,0,5,1,1,0,1708581853,"    echo \"$(date) - INFO - DB INFO - ${msg}\" >> ${log_file}"
+	    fi
+|3,0,5,1,1,0,1709542458,"    fi"
 "6	LINE	0
-	    echo "$(date) - INFO - DB INFO - ${msg}" >> ${log_file}
-|3,0,6,1,1,0,1708581506,"    echo \"$(date) - INFO - DB INFO - ${msg}\" >> ${log_file}"
+	       return $DB_DOWNLOAD_STATUS
+|3,0,6,1,1,0,1709542457,"       return $DB_DOWNLOAD_STATUS"
 "7	LINE	0
-	   
-	    if [ -z "${DB_IP}" ] || [ -z "${DB_PORT}" ] || [ -z "${DB_USER}" ] || [ -z "${DB_PASS}" ] 
-|3,0,7,1,2,0,1708581497,"   ","    if [ -z \"${DB_IP}\" ] || [ -z \"${DB_PORT}\" ] || [ -z \"${DB_USER}\" ] || [ -z \"${DB_PASS}\" ] "
+	
+|3,0,7,1,1,0,1709542457,""
 "8	LINE	0
-	    echo "$(date) - INFO - DB INFO - ${msg}" >> ${log_file}
-|3,0,8,1,1,0,1708581496,"    echo \"$(date) - INFO - DB INFO - ${msg}\" >> ${log_file}"
+	       display_msg "Download Error" $msg
+|3,0,8,1,1,0,1709542457,"       display_msg \"Download Error\" $msg"
 "9	LINE	0
-		--default-item "" \
-|3,0,9,1,1,0,1708580528,"	--default-item \"\" \\"
-""-	CHAR	0
-	a
-|3,1,36,0,1,0,1708613991,"a"
+	       echo "$(date) - ${msg}" |tee -a ${log_file}
+|3,0,9,1,1,0,1709542457,"       echo \"$(date) - ${msg}\" |tee -a ${log_file}"
+"-	CHAR	0
+	 
+|3,0,36,0,1,0,1709556138," "
 
 # File marks:
-'0  77  35  ~/mysql_install.sh
-|4,48,77,35,1708623234,"~/mysql_install.sh"
-'1  1  0  ~/pkg/*.sh
-|4,49,1,0,1708613950,"~/pkg/*.sh"
-'2  402  45  ~/mysql_install.sh
-|4,50,402,45,1708584798,"~/mysql_install.sh"
-'3  401  45  ~/mysql_install.sh
-|4,51,401,45,1708584798,"~/mysql_install.sh"
-'4  385  30  ~/mysql_install.sh
-|4,52,385,30,1708579027,"~/mysql_install.sh"
-'5  375  30  ~/mysql_install.sh
-|4,53,375,30,1708579027,"~/mysql_install.sh"
-'6  384  30  ~/mysql_install.sh
-|4,54,384,30,1708579027,"~/mysql_install.sh"
-'7  374  30  ~/mysql_install.sh
-|4,55,374,30,1708579027,"~/mysql_install.sh"
-'8  406  20  ~/mysql_install.sh
-|4,56,406,20,1708578634,"~/mysql_install.sh"
-'9  363  20  ~/mysql_install.sh
-|4,57,363,20,1708578634,"~/mysql_install.sh"
+'0  14  0  ~/.gitignore
+|4,48,14,0,1709606966,"~/.gitignore"
+'1  13  0  ~/.gitignore
+|4,49,13,0,1709606924,"~/.gitignore"
+'2  13  0  ~/.gitignore
+|4,50,13,0,1709606924,"~/.gitignore"
+'3  398  0  ~/mysql_install.sh
+|4,51,398,0,1709561334,"~/mysql_install.sh"
+'4  611  32  ~/mysql_install.sh
+|4,52,611,32,1709561223,"~/mysql_install.sh"
+'5  611  32  ~/mysql_install.sh
+|4,53,611,32,1709561223,"~/mysql_install.sh"
+'6  444  17  ~/mysql_install.sh
+|4,54,444,17,1709560981,"~/mysql_install.sh"
+'7  444  17  ~/mysql_install.sh
+|4,55,444,17,1709560981,"~/mysql_install.sh"
+'8  444  17  ~/mysql_install.sh
+|4,56,444,17,1709560981,"~/mysql_install.sh"
+'9  444  17  ~/mysql_install.sh
+|4,57,444,17,1709560981,"~/mysql_install.sh"
 
 # Jumplist (newest first):
--'  77  35  ~/mysql_install.sh
-|4,39,77,35,1708623234,"~/mysql_install.sh"
--'  402  45  ~/mysql_install.sh
-|4,39,402,45,1708613954,"~/mysql_install.sh"
--'  1  0  ~/pkg/*.sh
-|4,39,1,0,1708613950,"~/pkg/*.sh"
--'  1  0  ~/pkg/*.sh
-|4,39,1,0,1708613950,"~/pkg/*.sh"
--'  401  45  ~/mysql_install.sh
-|4,39,401,45,1708584798,"~/mysql_install.sh"
--'  401  45  ~/mysql_install.sh
-|4,39,401,45,1708584798,"~/mysql_install.sh"
--'  399  42  ~/mysql_install.sh
-|4,39,399,42,1708584477,"~/mysql_install.sh"
--'  398  42  ~/mysql_install.sh
-|4,39,398,42,1708584477,"~/mysql_install.sh"
--'  398  42  ~/mysql_install.sh
-|4,39,398,42,1708584477,"~/mysql_install.sh"
--'  313  23  ~/mysql_install.sh
-|4,39,313,23,1708581626,"~/mysql_install.sh"
--'  312  23  ~/mysql_install.sh
-|4,39,312,23,1708581626,"~/mysql_install.sh"
--'  312  23  ~/mysql_install.sh
-|4,39,312,23,1708581626,"~/mysql_install.sh"
--'  324  34  ~/mysql_install.sh
-|4,39,324,34,1708581624,"~/mysql_install.sh"
--'  323  34  ~/mysql_install.sh
-|4,39,323,34,1708581624,"~/mysql_install.sh"
--'  323  34  ~/mysql_install.sh
-|4,39,323,34,1708581624,"~/mysql_install.sh"
--'  334  8  ~/mysql_install.sh
-|4,39,334,8,1708581622,"~/mysql_install.sh"
--'  333  8  ~/mysql_install.sh
-|4,39,333,8,1708581622,"~/mysql_install.sh"
--'  333  8  ~/mysql_install.sh
-|4,39,333,8,1708581622,"~/mysql_install.sh"
--'  406  0  ~/mysql_install.sh
-|4,39,406,0,1708581621,"~/mysql_install.sh"
--'  405  0  ~/mysql_install.sh
-|4,39,405,0,1708581621,"~/mysql_install.sh"
--'  405  0  ~/mysql_install.sh
-|4,39,405,0,1708581621,"~/mysql_install.sh"
--'  389  2  ~/mysql_install.sh
-|4,39,389,2,1708581505,"~/mysql_install.sh"
--'  388  2  ~/mysql_install.sh
-|4,39,388,2,1708581505,"~/mysql_install.sh"
--'  388  2  ~/mysql_install.sh
-|4,39,388,2,1708581505,"~/mysql_install.sh"
--'  386  4  ~/mysql_install.sh
-|4,39,386,4,1708581499,"~/mysql_install.sh"
--'  385  4  ~/mysql_install.sh
-|4,39,385,4,1708581499,"~/mysql_install.sh"
--'  385  4  ~/mysql_install.sh
-|4,39,385,4,1708581499,"~/mysql_install.sh"
--'  385  9  ~/mysql_install.sh
-|4,39,385,9,1708581202,"~/mysql_install.sh"
--'  384  9  ~/mysql_install.sh
-|4,39,384,9,1708581202,"~/mysql_install.sh"
--'  384  9  ~/mysql_install.sh
-|4,39,384,9,1708581202,"~/mysql_install.sh"
--'  376  3  ~/mysql_install.sh
-|4,39,376,3,1708580595,"~/mysql_install.sh"
--'  375  3  ~/mysql_install.sh
-|4,39,375,3,1708580595,"~/mysql_install.sh"
--'  375  3  ~/mysql_install.sh
-|4,39,375,3,1708580595,"~/mysql_install.sh"
--'  350  8  ~/mysql_install.sh
-|4,39,350,8,1708580532,"~/mysql_install.sh"
--'  349  8  ~/mysql_install.sh
-|4,39,349,8,1708580532,"~/mysql_install.sh"
--'  349  8  ~/mysql_install.sh
-|4,39,349,8,1708580532,"~/mysql_install.sh"
--'  349  8  ~/mysql_install.sh
-|4,39,349,8,1708580531,"~/mysql_install.sh"
--'  351  1  ~/mysql_install.sh
-|4,39,351,1,1708580531,"~/mysql_install.sh"
--'  348  8  ~/mysql_install.sh
-|4,39,348,8,1708580531,"~/mysql_install.sh"
--'  350  1  ~/mysql_install.sh
-|4,39,350,1,1708580531,"~/mysql_install.sh"
--'  348  8  ~/mysql_install.sh
-|4,39,348,8,1708580531,"~/mysql_install.sh"
--'  350  1  ~/mysql_install.sh
-|4,39,350,1,1708580531,"~/mysql_install.sh"
--'  375  30  ~/mysql_install.sh
-|4,39,375,30,1708579027,"~/mysql_install.sh"
--'  374  30  ~/mysql_install.sh
-|4,39,374,30,1708579027,"~/mysql_install.sh"
--'  374  30  ~/mysql_install.sh
-|4,39,374,30,1708579027,"~/mysql_install.sh"
--'  375  36  ~/mysql_install.sh
-|4,39,375,36,1708578779,"~/mysql_install.sh"
--'  375  36  ~/mysql_install.sh
-|4,39,375,36,1708578779,"~/mysql_install.sh"
--'  377  20  ~/mysql_install.sh
-|4,39,377,20,1708578653,"~/mysql_install.sh"
--'  376  20  ~/mysql_install.sh
-|4,39,376,20,1708578653,"~/mysql_install.sh"
--'  376  20  ~/mysql_install.sh
-|4,39,376,20,1708578653,"~/mysql_install.sh"
--'  363  20  ~/mysql_install.sh
-|4,39,363,20,1708578634,"~/mysql_install.sh"
--'  356  20  ~/mysql_install.sh
-|4,39,356,20,1708578634,"~/mysql_install.sh"
--'  362  20  ~/mysql_install.sh
-|4,39,362,20,1708578634,"~/mysql_install.sh"
--'  355  20  ~/mysql_install.sh
-|4,39,355,20,1708578634,"~/mysql_install.sh"
--'  362  20  ~/mysql_install.sh
-|4,39,362,20,1708578634,"~/mysql_install.sh"
--'  355  20  ~/mysql_install.sh
-|4,39,355,20,1708578634,"~/mysql_install.sh"
--'  355  33  ~/mysql_install.sh
-|4,39,355,33,1708578624,"~/mysql_install.sh"
--'  355  33  ~/mysql_install.sh
-|4,39,355,33,1708578624,"~/mysql_install.sh"
--'  362  31  ~/mysql_install.sh
-|4,39,362,31,1708578603,"~/mysql_install.sh"
--'  355  31  ~/mysql_install.sh
-|4,39,355,31,1708578603,"~/mysql_install.sh"
--'  361  31  ~/mysql_install.sh
-|4,39,361,31,1708578603,"~/mysql_install.sh"
--'  354  31  ~/mysql_install.sh
-|4,39,354,31,1708578603,"~/mysql_install.sh"
--'  354  31  ~/mysql_install.sh
-|4,39,354,31,1708578603,"~/mysql_install.sh"
--'  361  31  ~/mysql_install.sh
-|4,39,361,31,1708578603,"~/mysql_install.sh"
--'  354  31  ~/mysql_install.sh
-|4,39,354,31,1708578603,"~/mysql_install.sh"
--'  354  31  ~/mysql_install.sh
-|4,39,354,31,1708578603,"~/mysql_install.sh"
--'  354  31  ~/mysql_install.sh
-|4,39,354,31,1708578586,"~/mysql_install.sh"
--'  354  31  ~/mysql_install.sh
-|4,39,354,31,1708578586,"~/mysql_install.sh"
--'  354  22  ~/mysql_install.sh
-|4,39,354,22,1708578505,"~/mysql_install.sh"
--'  354  22  ~/mysql_install.sh
-|4,39,354,22,1708578505,"~/mysql_install.sh"
--'  364  29  ~/mysql_install.sh
-|4,39,364,29,1708578493,"~/mysql_install.sh"
--'  357  29  ~/mysql_install.sh
-|4,39,357,29,1708578493,"~/mysql_install.sh"
--'  363  29  ~/mysql_install.sh
-|4,39,363,29,1708578493,"~/mysql_install.sh"
--'  356  29  ~/mysql_install.sh
-|4,39,356,29,1708578493,"~/mysql_install.sh"
--'  356  29  ~/mysql_install.sh
-|4,39,356,29,1708578493,"~/mysql_install.sh"
--'  355  29  ~/mysql_install.sh
-|4,39,355,29,1708578493,"~/mysql_install.sh"
--'  363  29  ~/mysql_install.sh
-|4,39,363,29,1708578493,"~/mysql_install.sh"
--'  356  29  ~/mysql_install.sh
-|4,39,356,29,1708578493,"~/mysql_install.sh"
--'  356  29  ~/mysql_install.sh
-|4,39,356,29,1708578493,"~/mysql_install.sh"
--'  355  29  ~/mysql_install.sh
-|4,39,355,29,1708578493,"~/mysql_install.sh"
--'  355  29  ~/mysql_install.sh
-|4,39,355,29,1708578455,"~/mysql_install.sh"
--'  355  29  ~/mysql_install.sh
-|4,39,355,29,1708578455,"~/mysql_install.sh"
--'  355  33  ~/mysql_install.sh
-|4,39,355,33,1708578291,"~/mysql_install.sh"
--'  355  33  ~/mysql_install.sh
-|4,39,355,33,1708578291,"~/mysql_install.sh"
--'  339  48  ~/mysql_install.sh
-|4,39,339,48,1708576873,"~/mysql_install.sh"
--'  337  48  ~/mysql_install.sh
-|4,39,337,48,1708576873,"~/mysql_install.sh"
--'  338  48  ~/mysql_install.sh
-|4,39,338,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  338  48  ~/mysql_install.sh
-|4,39,338,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
--'  336  48  ~/mysql_install.sh
-|4,39,336,48,1708576873,"~/mysql_install.sh"
+-'  14  0  ~/.gitignore
+|4,39,14,0,1709606966,"~/.gitignore"
+-'  13  0  ~/.gitignore
+|4,39,13,0,1709606954,"~/.gitignore"
+-'  13  0  ~/.gitignore
+|4,39,13,0,1709606924,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1709606919,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1709606919,"~/.gitignore"
+-'  398  0  ~/mysql_install.sh
+|4,39,398,0,1709561334,"~/mysql_install.sh"
+-'  398  0  ~/mysql_install.sh
+|4,39,398,0,1709561334,"~/mysql_install.sh"
+-'  398  0  ~/mysql_install.sh
+|4,39,398,0,1709561334,"~/mysql_install.sh"
+-'  398  0  ~/mysql_install.sh
+|4,39,398,0,1709561334,"~/mysql_install.sh"
+-'  679  5  ~/mysql_install.sh
+|4,39,679,5,1709561305,"~/mysql_install.sh"
+-'  679  5  ~/mysql_install.sh
+|4,39,679,5,1709561305,"~/mysql_install.sh"
+-'  679  5  ~/mysql_install.sh
+|4,39,679,5,1709561305,"~/mysql_install.sh"
+-'  679  5  ~/mysql_install.sh
+|4,39,679,5,1709561305,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561304,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561304,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561304,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561304,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561223,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561223,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561223,"~/mysql_install.sh"
+-'  611  32  ~/mysql_install.sh
+|4,39,611,32,1709561223,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  545  53  ~/mysql_install.sh
+|4,39,545,53,1709561192,"~/mysql_install.sh"
+-'  57  37  ~/mysql_install.sh
+|4,39,57,37,1709561192,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  69  71  ~/mysql_install.sh
+|4,39,69,71,1709561191,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  75  32  ~/mysql_install.sh
+|4,39,75,32,1709561190,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  108  58  ~/mysql_install.sh
+|4,39,108,58,1709561189,"~/mysql_install.sh"
+-'  110  69  ~/mysql_install.sh
+|4,39,110,69,1709561189,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  121  69  ~/mysql_install.sh
+|4,39,121,69,1709561188,"~/mysql_install.sh"
+-'  132  70  ~/mysql_install.sh
+|4,39,132,70,1709561188,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  146  73  ~/mysql_install.sh
+|4,39,146,73,1709561187,"~/mysql_install.sh"
+-'  161  98  ~/mysql_install.sh
+|4,39,161,98,1709561186,"~/mysql_install.sh"
+-'  173  84  ~/mysql_install.sh
+|4,39,173,84,1709561186,"~/mysql_install.sh"
+-'  161  98  ~/mysql_install.sh
+|4,39,161,98,1709561186,"~/mysql_install.sh"
+-'  173  84  ~/mysql_install.sh
+|4,39,173,84,1709561186,"~/mysql_install.sh"
+-'  161  98  ~/mysql_install.sh
+|4,39,161,98,1709561186,"~/mysql_install.sh"
+-'  173  84  ~/mysql_install.sh
+|4,39,173,84,1709561186,"~/mysql_install.sh"
+-'  161  98  ~/mysql_install.sh
+|4,39,161,98,1709561186,"~/mysql_install.sh"
 
 # History of marks within files (newest to oldest):
 
+> ~/.gitignore
+	*	1709606965	0
+	"	14	0
+	.	14	0
+	+	12	14
+	+	18	10
+	+	19	0
+	+	14	0
+
 > ~/mysql_install.sh
-	*	1708614080	0
-	"	77	35
-	^	77	36
-	.	77	35
-	+	406	69
-	+	406	0
-	+	339	3
-	+	345	13
-	+	361	12
-	+	348	29
-	+	352	36
-	+	353	10
-	+	355	12
-	+	353	35
-	+	355	49
-	+	356	10
-	+	355	15
-	+	356	41
-	+	354	5
-	+	353	10
-	+	354	13
-	+	355	20
-	+	356	15
-	+	354	29
-	+	355	36
-	+	356	31
-	+	354	39
-	+	406	4
-	+	406	40
-	+	406	29
-	+	406	31
-	+	406	0
-	+	377	0
-	+	362	0
-	+	406	3
-	+	377	45
-	+	377	0
-	+	377	40
-	+	377	47
-	+	382	52
-	+	385	22
-	+	382	57
-	+	385	30
-	+	376	30
-	+	377	0
-	+	340	0
-	+	344	0
-	+	340	20
-	+	341	17
-	+	342	17
-	+	343	13
-	+	353	34
-	+	354	26
-	+	355	34
-	+	356	29
-	+	353	38
-	+	354	30
-	+	355	37
-	+	356	32
-	+	357	10
-	+	351	0
-	+	357	10
-	+	382	0
-	+	378	45
-	+	379	47
-	+	380	47
-	+	381	42
-	+	385	3
-	+	382	63
-	+	406	0
-	+	389	5
-	+	386	47
-	+	385	75
-	+	388	17
-	+	382	78
-	+	385	0
-	+	383	0
-	+	406	0
+	*	1709561331	0
+	"	398	0
+	^	444	18
+	.	444	17
+	+	389	3
+	+	386	63
+	+	410	0
+	+	393	5
+	+	390	47
+	+	389	75
+	+	392	17
+	+	386	78
+	+	389	0
 	+	387	0
-	+	337	0
-	+	387	52
-	+	394	153
-	+	393	54
-	+	394	12
-	+	394	113
-	+	406	51
-	+	406	0
+	+	410	0
 	+	391	0
-	+	390	0
-	+	399	0
-	+	397	7
-	+	405	0
-	+	399	0
-	+	398	0
-	+	400	52
-	+	403	66
-	+	406	0
-	+	402	45
-	+	88	39
-	+	92	47
-	+	77	35
+	+	340	0
+	+	391	52
+	+	398	153
+	+	397	54
+	+	398	12
+	+	398	113
+	+	410	51
+	+	410	0
+	+	395	0
+	+	394	0
+	+	403	0
+	+	401	7
+	+	409	0
+	+	403	0
+	+	402	0
+	+	404	52
+	+	407	66
+	+	410	0
+	+	406	45
+	+	91	39
+	+	95	47
+	+	80	35
+	+	665	14
+	+	666	31
+	+	664	33
+	+	666	38
+	+	668	15
+	+	667	11
+	+	669	5
+	+	675	8
+	+	670	18
+	+	671	11
+	+	672	11
+	+	673	11
+	+	674	11
+	+	627	26
+	+	683	13
+	+	682	20
+	+	448	0
+	+	420	36
+	+	33	69
+	+	425	5
+	+	420	70
+	+	520	74
+	+	532	75
+	+	421	46
+	+	421	205
+	+	421	99
+	+	421	89
+	+	425	5
+	+	425	11
+	+	425	58
+	+	421	188
+	+	420	0
+	+	425	0
+	+	419	35
+	+	421	76
+	+	425	43
+	+	426	3
+	+	425	32
+	+	426	0
+	+	448	0
+	+	434	5
+	+	425	0
+	+	419	8
+	+	424	35
+	+	436	9
+	+	437	92
+	+	423	15
+	+	438	3
+	+	416	0
+	+	445	5
+	+	448	0
+	+	440	6
+	+	440	0
+	+	439	21
+	+	442	31
+	+	406	37
+	+	42	31
+	+	352	31
+	+	418	0
+	+	448	0
+	+	449	3
+	+	447	70
+	+	685	45
+	+	442	47
+	+	431	43
+	+	444	17
+
+> /mysql/etc/my.cnf
+	*	1709268797	0
+	"	55	18
+	^	55	19
+	.	55	18
+	+	55	18
 
 > ~/pkg/*.sh
 	*	1708613949	0
@@ -444,10 +494,6 @@
 	+	14	0
 	+	13	0
 	+	14	0
-
-> /mysql/etc/my.cnf
-	*	1708506799	0
-	"	53	0
 
 > ~/8.sh
 	*	1708502301	0

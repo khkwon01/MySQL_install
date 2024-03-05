@@ -1,213 +1,3 @@
-sh *.sh
-vim mysql_install.sh 
-sh *.sh
-vim mysql_install.sh 
-sh *.sh
-vim mysql_install.sh 
-ssh admin@10.0.20.116
-mysqlsh admin@10.0.20.116
-ls
-mysqlsh
-mysqlsh repl@10.0.10.96
-mysqlsh repl@10.0.10.96 -- util
-mysqlsh repl@10.0.10.96 -- util copyschema
-mysqlsh repl@10.0.10.96 --util copyschema '
-mysqlsh repl@10.0.10.96 --util 
-mysqlsh repl@10.0.10.96 -- util
-mysqlsh repl@10.0.10.96 -- util help()
-mysqlsh repl@10.0.10.96 -- util help
-mysqlsh repl@10.0.10.96 -- util.help
-mysqlsh repl@10.0.10.96 
-mysqlsh admin@10.0.20.116
-mysqlsh admin@10.0.20.116 --help
-mysqlsh admin@10.0.20.116 --help | grep util
-ls
-cd pkg
-ls
-cat /etc/redhat-release 
-uname -a
-wget https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-8.3.0-1.el8.x86_64.rpm
-rpm -qa | grep shell
-yum remove mysql-shell-commercial
-ls
-rpm -ivh mysql-shell-8.3.0-1.el8.x86_64.rpm 
-mysqlsh admin@10.0.20.116 --help | grep util
-mysqlsh admin@10.0.20.116 
-mysqlsh repl@10.0.10.96 -- util copySchemas 'mysql://root@10.0.10.96' --ignoreVersion=true —skipBinlog=true —dryRun=false —threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas 'mysql://root@10.0.10.96/employees' --ignoreVersion=true —skipBinlog=true —dryRun=false —threads=8
-mysqlsh repl@10.0.10.96 -- util copyInstance 'mysql://root@10.0.10.96' --ignoreVersion=true —skipBinlog=true —dryRun=false —threads=8
-mysqlsh repl@10.0.10.96 -- util copyInstance 'mysql://root@10.0.10.96' --ignoreVersion=true --skipBinlog=true --dryRun=false —threads=8
-mysqlsh repl@10.0.10.96 -- util copyInstance 'mysql://root@10.0.10.96' --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas 'mysql://root@10.0.10.96' --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh admin@10.0.20.116 
-mysqlsh repl@10.0.10.96 -- util copySchemas 'mysql://root@10.0.10.96' --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas 'mysql://root@10.0.10.96?scheme=employees' --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas '{"scheme":"employees","user":"root", "host":"10.0.20.116"}' --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas {"scheme":"employees","user":"root","host":"10.0.20.116"} --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas-{"scheme":"employees","user":"root","host":"10.0.20.116"} --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas={"scheme":"employees","user":"root","host":"10.0.20.116"} --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96 -- util copySchemas='{"scheme":"employees","user":"root","host":"10.0.20.116"}' --ignoreVersion=true --skipBinlog=true --dryRun=false --threads=8
-mysqlsh repl@10.0.10.96
-mysqlsh root@10.0.10.96
-mysqlsh admin@10.0.10.96
-mysqlsh admin@10.0.20.2
-ls
-sh *.sh
-ls
-sh *.sh
-ls
-vim *.sh
-tar 
-tar --help
-vim *.sh
-sh *.sh
-userdel mysqlsuer -r
-userdel mysqluser -r
-groupdel mysqlgrp
-ls
-sh *.sh
-ls
-cd pkg
-ls
-userdel mysqluser -r
-groupdel mysqlgrp
-ls
-rm -rf *.tar*
-ls
-rm -rf REA*
-ls
-cd ..
-ls
-vim *.sh
-sh *.sh
-ls
-cd *
-ls
-cd *x86*
-ls
-cd ..
-ls
-rm -rf mysql-commercial-8.0.36-linux-glibc2.28-x86_64/
-vim *.sh
-ls
-userdel -r mysqluser
-groupdel mysqlgrp
-ls
-sh *.sh
-ls
-vim *.sh
-userdel -r mysqluser
-groupdel mysqlgrp
-sh *.sh
-ls
-sh *.sh
-ps -ef | grep mysql
-ls
-cd /mysql/
-ls
-cd mysql-latest/
-ls
-cd support-files/
-ls
-cd
-ls
-find / -name     MSG=$(ssh -t -i /home/opc/sshkeys/id_rsa_$( echo ${replica} | cut -d"." -f1) opc@${replica} "sudo systemctl start mysqld-advanced.service")
-find / -name mysqld-*
-ls
-wget https://github.com/khkwon01/MySQL-setup/raw/main/systemctl/mysqld-advanced.service
-ls
-mv mysqld-advanced.service /usr/lib/systemd/system
-ls
-chmod 644 /usr/lib/systemd/system/mysqld-advanced.service 
-systemctl enable mysqld-advanced.service
-ls -al /usr/lib/systemd/system/mysqld-advanced.service
-systemctl enable mysqld-advanced.service
-vim /usr/lib/systemd/system/mysqld-advanced.service
-systemctl enable mysqld-advanced.service
-vim /usr/lib/systemd/system/mysqld-advanced.service
-systemctl enable mysqld-advanced.service
-systemctl list mysqld-advanced.service
-systemctl 
-systemctl --help
-systemctl reload
-systemctl reload mysqld-advanced.service
-cd /etc/systemd/
-ls
-cd sytem
-cd system/
-ls
-ls -al
-systemctl enable mysqld
-systemctl reload mysqld-advanced
-systemctl enable mysqld-advanced
-ls -al /usr/lib/systemd/system/mysqld-advanced.service
-chmod 744 /usr/lib/systemd/system/mysqld-advanced.service 
-systemctl enable mysqld-advanced
-chmod 777 /usr/lib/systemd/system/mysqld-advanced.service 
-systemctl enable mysqld-advanced
-systemctl cat mysqld-advanced.service 
-sudo systemctl daemon-reload
-chmod 644 /usr/lib/systemd/system/mysqld-advanced.service 
-systemctl cat mysqld-advanced.service 
-systemctl enable mysqld-advanced
-systemctl start mysqld-advanced
-systemctl enable mysqld-advanced
-systemctl start mysqld-advanced
-cd /usr/lib/systemd/system
-ls
-ls -al mysqld-advanced.service 
-ls -al
-ls
-vim mysqld-advanced.service 
-systemctl start mysqld-advanced
-vim mysqld-advanced.service 
-systemctl enable mysqld-advanced
-vim mysqld-advanced.service 
-systemctl enable mysqld-advanced
-ls -al /usr/lib/systemd/system/mysqld-advanced.service
-vim mysqld-advanced.service 
-ls
-vim vdo.service 
-vim mysqld-advanced.service 
-systemctl --help
-systemctl enable mysqld-advanced
-systemctl enable mysqld-advanced.service
-vim mysqld-advanced.service 
-systemctl enable mysqld-advanced.service
-ls -al mysqld-advanced
-ls -al mysqld-advanced.service
-systemctl enable mysqld-advanced.service
-ls -al /etc/systemd/system/
-cp mysqld-advanced.service /etc/systemd/system/
-systemctl enable mysqld-advanced.service
-systemctl start mysqld-advanced.service 
-systemctl status mysqld-advanced.service 
-ls
-cd
-ls
-cd /mysql/
-ls
-cd log
-ls
-view *
-ls
-systemctl status mysqld-advanced.service 
-systemctl stop mysqld-advanced.service 
-systemctl stop mysqld-advanced
-systemctl status mysqld-advanced.service 
-ps -ef | grep mysql
-ls
-cd ..
-ls
-systemctl enable mysqld-advanced.service
-ls -al /etc/systemd/system/
-cat  /etc/systemd/system/mysqld-advanced.service
-/mysql/mysql-latest/bin/mysqld --defaults-file=/mysql/etc/my.cnf
-cat  /etc/systemd/system/mysqld-advanced.service
-vim  /etc/systemd/system/mysqld-advanced.service
-systemctl disable mysqld-advanced.service
-systemctl enable mysqld-advanced.service
-systemctl start mysqld-advanced.service
 systemctl status mysqld-advanced.service
 vim  /etc/systemd/system/mysqld-advanced.service
 systemctl disable mysqld-advanced.service
@@ -997,4 +787,214 @@ ls
 view *.log
 sh mysql_install.sh 
 ls
+sh mysql_install.sh 
+ls
+rm -rf pkg
+ls
+yum install git
+git init
+ls
+git remote
+git remote add origin https://github.com/khkwon01/MySQL_install
+git add .
+git commit -m "MySQL 설치"
+git push origin master
+git remote add origin https://khkwon01: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@github.com/khkwon01/MySQL_install
+git remote delete
+git remote remove
+git remote remove origin
+git remote add origin https://khkwon01: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@github.com/khkwon01/MySQL_install
+git push origin master
+ls
+sh mysql_install.sh 
+mysqlsh root@127.0.0.1
+pip install openai
+pip3 install openai
+pip3 install tqm
+pip3 install tqdm
+mysqlsh root@127.0.0.1
+sh mysql_install.sh 
+ls
+cd pkg
+ls
+cd ..
+ls
+sh mysql_install.sh 
+mysqlsh root@127.0.0.1
+ls
+cd /mysql/
+ls
+cd etc
+ls
+vim my.cnf 
+ls
+ls
+cd pkg
+ls
+du -sk *
+ls
+mysqlsh root@127.0.0.1
+ls
+cd /mysql/
+ls
+cd etc
+ls
+vim my.cnf 
+ps -ef | grep mysql
+systemctl list-union
+systemctl list-unions
+systemctl listunions
+systemctl list unions
+systemctl list
+systemctl 
+systemctl | grep mysql
+systemcl restart mysqld-advanced.service
+systemctl restart mysqld-advanced.service 
+mysqlsh root@127.0.0.1
+ls
+cat *
+mysqlsh admin@10.0.20.38
+ls
+view mysql_install.sh
+$DIALOG --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+echo $?
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+echo $?
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 61
+dialog --title "YES/NO BOX" --clear "$@"         --yesno "Hi, this is a yes/no dialog box. You can use this to ask \
+                 questions that have an answer of either yes or no. \
+                 BTW, do you notice that long lines will be automatically \
+                 wrapped around so that they can fit in the box? You can \
+                 also control line breaking explicitly by inserting \
+                 'backslash n' at any place you like, but in this case, \
+                 auto wrap around will be disabled and you will have to \
+                 control line breaking yourself." 15 10
+test=`dialog --title "test" --clear --yesno "test??" 10 10
+`
+test=`dialog --title "test" --clear --yesno "test??" 10 10`
+exec 3>&1
+test=`dialog --title "test" --clear --yesno "test??" 10 10`
+test=$(dialog --title "test" --clear --yesno "test??" 10 10 2>&1 1>&3)
+exec 3>&-
+echo $test
+exec 3>&1
+test=$(dialog --title "test" --clear --yesno "test??" 10 10 2>&1 1>&3)
+exec 3>&1
+echo $test
+test=$(dialog --title "test" --clear --yesno "test??" 10 10 2>&1 1>&3)
+echo $test
+test=`dialog --title "test" --clear --yesno "test??" 10 10`
+dialog --title "reinstall mysql" 621                    --clear 622                    --yesno "Does MySQL delete?" 15 15
+dialog --title "reinstall mysql" --clear                   --yesno "Does MySQL delete?" 15 15
+dialog --title "reinstall mysql" --clear                   --yesno "Does MySQL delete?" 30 15
+dialog --title "reinstall mysql" --clear                   --yesno "Does MySQL delete?" 5 30
+sh *.sh
+vim *.sh
+sh *.sh
+view *.sh
+vim *.sh
+ps -ef | grep mysqlsh
+kill 517903
+mysqlsh
+mysqlsh root@127.0.0.1
+mysqlsh 
+mysqlsh -h
+mysqlsh --h
+mysqlsh --help
+ps -ef | grep mysqlsh
+kill 518114
+ps -ef | grep mysqlsh
+kill 518343
+ps -ef | grep mysqlsh
+mysqlsh root@127.0.0.1
+ps -ef | grep mysqlsh
+cd /mysql
+ls
+cd log
+ls
+view err_log.log 
+cd
+ls
+cd pkg
+ls
+cd ..
+ls
+vim *.sh
+sh mysql_install.sh 
+vim *.sh
+sh mysql_install.sh 
+vim *.sh
+sh mysql_install.sh 
+vim *.sh
+sh mysql_install.sh 
+vim *.sh
+sh mysql_install.sh 
+vim *.sh
+sh mysql_install.sh 
+ls
+rm -rf airport-db/
+ls
+sh mysql_install.sh 
+vim *.sh
 sh mysql_install.sh 

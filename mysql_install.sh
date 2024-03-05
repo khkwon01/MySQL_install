@@ -30,6 +30,8 @@ export sw_dir="${working_dir}/pkg"
 export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p36186202_580_Linux-x86-64.zip?aru=25528186&patch_file=p36186202_580_Linux-x86-64.zip'
 export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p36186982_800_Linux-x86-64.zip?aru=25528525&patch_file=p36186982_800_Linux-x86-64.zip'
 
+export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'
+
 #####################################################
 # FUNCTIONS
 #####################################################
@@ -37,6 +39,7 @@ export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p3
 # Display message
 display_msg() {
     dialog --title "$1" \
+	--backtitle "Message Display" \
         --no-collapse \
 	--msgbox "$2" 0 0
 }
@@ -346,6 +349,7 @@ connect_mysql_server () {
 
     result=$(dialog \
         --title "Database info" \
+	--backtitle "Connection test" \
         --clear \
         --no-collapse \
         --cancel-label "Exit" \
@@ -399,9 +403,48 @@ connect_mysql_server () {
        display_msg "Error - Connection" "${msg}\n${result}"
        echo "$(date) - ERROR - ${msg}" >> ${log_file}
     else 
-       display_msg "Connection test is succeed" "${result}"
+       display_msg "Connection success" "${result}"
        echo "$(date) - INFO - Connection test is ok" >> ${log_file}
     fi
+
+    echo "$(date) - INFO - End function ${FUNCNAME[0]}" >> ${log_file}
+}
+
+load_data () {
+    
+    ERR=0
+
+    echo "$(date) - INFO - Start function ${FUNCNAME[0]}" >> ${log_file}
+
+    sudo rm -f ${sw_dir}/airportdb.tar.gz
+    echo "$(date) - INFO - Download of airport db... please wait..." >> ${log_file}
+    wget --progress=dot --secure-protocol=auto -O "${sw_dir}/airportdb.tar.gz" ${AIRPORT_DB} 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "Data Download" --gauge "Download airport data from repo" 10 60
+
+    cd ${sw_dir}
+    sudo rm -rf ${sw_dir}/airport-db
+    sudo tar xf ${sw_dir}/airportdb.tar.gz 
+    DB_DOWNLOAD_STATUS=$?
+
+    if [ $DB_DOWNLOAD_STATUS -ne 0 ] ; then
+       msg="ERROR - Error during the download of airport db"
+       echo "$(date) - ${msg}" |tee -a ${log_file}
+       display_msg "Download Error" "${msg}"
+
+       return $DB_DOWNLOAD_STATUS
+    fi
+
+    clear
+    sudo mysqlsh -uroot -p -- util loadDump ${sw_dir}/airport-db --resetProgress --threads 10 2>&1
+    ERR=$?
+    if [ $ERR -ne 0 ] ; then
+       msg="ERROR - Error during loading airport db"
+       echo "$(date) - ${msg}" |tee -a ${log_file}
+       display_msg "Loading Data Error" "${msg}"
+
+       return $ERR
+    fi   
+
+    display_msg "Download Completed" "The airport db load is completed"
 
     echo "$(date) - INFO - End function ${FUNCNAME[0]}" >> ${log_file}
 }
@@ -474,7 +517,7 @@ download_software_from_MOS () {
 	stop_execution_for_error $ERR $msg
     fi
 
-    echo "$(date) - INFO - Download of MySQL tar repo... please wait..." |tee -a ${log_file}
+    echo "$(date) - INFO - Download of MySQL tar repo... please wait..." >> ${log_file}
     wget --progress=dot --load-cookies="$COOKIE_FILE" --save-cookies="$COOKIE_FILE" --keep-session-cookies ${MOS_LINK_SRV_TAR} -O "${sw_dir}/${MYSQL}.zip" 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "MySQL configuration" --gauge "Download MySQL binary tar (${VERSION})" 10 60
     
 #    SRV_TAR_PKG_DOWNLOAD_PID=$!
@@ -486,7 +529,7 @@ download_software_from_MOS () {
        display_msg "Download Error" $msg
     fi
 
-    echo "$(date) - INFO - Download of MySQL rpms repo... please wait..." |tee -a ${log_file}
+    echo "$(date) - INFO - Download of MySQL rpms repo... please wait..." >> ${log_file}
     wget --progress=dot --load-cookies="$COOKIE_FILE" --save-cookies="$COOKIE_FILE" --keep-session-cookies ${MOS_LINK_SHELL_TAR} -O "${sw_dir}/${MSHELL}.zip" 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "MySQL configuration" --gauge "Download MySQL shell (${VERSION})" 10 60
 
     SHL_RPM_DOWNLOAD_STATUS=$?
@@ -581,6 +624,7 @@ if [ $OPTIND -eq 1 ]; then
 		"2" "Install mysql shell" \
 		"3" "Install mysql server" \
 		"4" "Test connectivity of MySQL" \
+		"5" "Load Airport data" \
 		"9" "This Program test" \
 		2>&1 1>&3)
 
@@ -617,18 +661,28 @@ if [ $OPTIND -eq 1 ]; then
 
 	    if [ $result -ne 0 ]
 	    then
-                systemctl stop mysqld-advanced.service &> /dev/null
-	        systemctl disable mysqld-advanced.service &> /dev/null
-	        userdel mysqluser &> /dev/null
-	        groupdel mysqlgrp &> /dev/null
-	        rm -rf /mysql/  &> /dev/null
+		dialog --title "reinstall mysql" \
+		   --clear \
+		   --yesno "Does MySQL delete?" 5 30
+	        DEL=$?
+	        if [ $DEL -ne 1 ] 
+		then	
+                   systemctl stop mysqld-advanced.service &> /dev/null
+	           systemctl disable mysqld-advanced.service &> /dev/null
+	           userdel mysqluser &> /dev/null
+	           groupdel mysqlgrp &> /dev/null
+	           rm -rf /mysql/  &> /dev/null
+	        fi
             fi
 	    ;;
 	4) 
 	    connect_mysql_server
 	    ;;
+	5)
+            load_data
+            ;;
 	9 ) 
-	    test_func | dialog --backtitle "test" --gauge "progress test.." 10 60
+	    test_func | dialog --backtitle "progress test" --gauge "progress test.." 10 60
 	    #read -p "Press ENTER to continue"
 	    ;;
 	esac

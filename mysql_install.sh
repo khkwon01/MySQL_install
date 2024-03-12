@@ -189,6 +189,19 @@ install_mysql_server () {
        return $ERR
     fi
 
+    echo "$(date) - INFO - Download systemctl auto start script" |tee -a ${log_file}
+    cd /mysql
+    mystart="https://raw.githubusercontent.com/khkwon01/MySQL-setup/main/systemctl/mysqld-advanced.service"
+    sudo wget --secure-protocol=auto ${mystart}
+    ERR=$?
+    if [ $ERR -ne 0 ]
+    then
+       msg="error during download of systemctl mysql script"
+       display_msg "Server installation" "${msg}"
+       echo "$(date) - ERROR - ${msg}" >> ${log_file}
+       return $ERR
+    fi
+
     echo "$(date) - INFO - Set ownerships to MySQL Enterprise directories on this server" |tee -a ${log_file}
     sudo chown -R mysqluser:mysqlgrp /mysql
     ERR=$?
@@ -240,19 +253,6 @@ install_mysql_server () {
     if [ $ERR -ne 0 ]
     then
        msg="error during OS selinux mode change"
-       display_msg "Server installation" "${msg}"
-       echo "$(date) - ERROR - ${msg}" >> ${log_file}
-       return $ERR
-    fi
-
-    echo "$(date) - INFO - Download systemctl auto start script" |tee -a ${log_file}
-    cd /mysql
-    mystart="https://raw.githubusercontent.com/khkwon01/MySQL-setup/main/systemctl/mysqld-advanced.service"
-    sudo wget --secure-protocol=auto ${mystart}
-    ERR=$?
-    if [ $ERR -ne 0 ]
-    then
-       msg="error during download of systemctl mysql script"
        display_msg "Server installation" "${msg}"
        echo "$(date) - ERROR - ${msg}" >> ${log_file}
        return $ERR
@@ -401,7 +401,7 @@ connect_mysql_server () {
     echo "$(date) - INFO - DB INFO - ${msg}" >> ${log_file}
 
     echo "$(date) - INFO - test connectivity for MySQL" >> ${log_file}
-    result=$(/mysql/mysql-latest/bin/mysql -u${DB_USER} -h${DB_IP} -P${DB_PORT} -p${DB_PASS} -e "show databases")
+    result=$(sudo /mysql/mysql-latest/bin/mysql -u${DB_USER} -h${DB_IP} -P${DB_PORT} -p${DB_PASS} -e "show databases")
     ERR=$?
     if [ $ERR -ne 0 ]
     then

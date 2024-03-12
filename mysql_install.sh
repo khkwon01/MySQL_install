@@ -673,11 +673,11 @@ if [ $OPTIND -eq 1 ]; then
 	        DEL=$?
 	        if [ $DEL -ne 1 ] 
 		then	
-                   systemctl stop mysqld-advanced.service &> /dev/null
-	           systemctl disable mysqld-advanced.service &> /dev/null
-	           userdel mysqluser &> /dev/null
-	           groupdel mysqlgrp &> /dev/null
-	           rm -rf /mysql/  &> /dev/null
+                   sudo systemctl stop mysqld-advanced.service &> /dev/null
+                   sudo systemctl disable mysqld-advanced.service &> /dev/null
+                   sudo userdel mysqluser &> /dev/null
+                   sudo groupdel mysqlgrp &> /dev/null
+                   sudo rm -rf /mysql/  &> /dev/null
 	        fi
             fi
 	    ;;

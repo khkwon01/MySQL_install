@@ -144,11 +144,13 @@ install_mysql_server () {
        return $ERR
     fi
 
+    sudo chown -R mysqluser:mysqlgrp /mysql
+    
     rm -f ${sw_dir}/*x86_64.tar.xz
     sudo unzip ${sw_dir}/${MYSQL}.zip -d ${sw_dir} *.tar.xz
 
     echo "$(date) - INFO - Extract MySQL Enterprise tar on this server" |tee -a ${log_file}
-    sudo cd /mysql
+    cd /mysql
     sudo tar xf ${sw_dir}/*x86_64.tar.xz 
     ERR=$?
     if [ $ERR -ne 0 ]
@@ -159,11 +161,11 @@ install_mysql_server () {
        return $ERR
     fi
 
-    sudo cd /mysql
+    cd /mysql
     sudo mv $( basename -s .tar.xz ${sw_dir}/*x86_64.tar.xz ) ${MYSQL}
 
     echo "$(date) - INFO - Create symbolic link to MySQL Enterprise installation on this server" |tee -a ${log_file}
-    sudo cd /mysql
+    cd /mysql
     sudo ln -s ${MYSQL} mysql-latest
     ERR=$?
     if [ $ERR -ne 0 ]
@@ -176,7 +178,7 @@ install_mysql_server () {
 
     echo "$(date) - INFO - Copy my.cnf for commercial installation on this server" |tee -a ${log_file}
     mycnf="https://github.com/khkwon01/MySQL-setup/raw/main/mycnf/my.cnf"
-    sudo cd /mysql/etc/
+    cd /mysql/etc/
     sudo wget --secure-protocol=auto ${mycnf}
     ERR=$?
     if [ $ERR -ne 0 ]
@@ -244,7 +246,7 @@ install_mysql_server () {
     fi
 
     echo "$(date) - INFO - Download systemctl auto start script" |tee -a ${log_file}
-    sudo cd /mysql
+    cd /mysql
     mystart="https://raw.githubusercontent.com/khkwon01/MySQL-setup/main/systemctl/mysqld-advanced.service"
     sudo wget --secure-protocol=auto ${mystart}
     ERR=$?

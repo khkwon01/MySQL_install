@@ -494,6 +494,7 @@ download_software_from_MOS () {
 	stop_execution_for_error $ERR "${msg}"
     fi
 
+    cd ${working_dir}
     # Cookie file for the authentication
     export COOKIE_FILE=$(mktemp  --tmpdir=${working_dir} wget_sh_XXXXXX)
     if [ $? -ne 0 ] || [ -z "$COOKIE_FILE" ]

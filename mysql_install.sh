@@ -8,6 +8,10 @@ MYSQL="MySQL_"${VERSION}
 MSHELL="MySQL_Shell_"${VERSION}
 
 ERR=0
+
+# Setup general language type
+export LANG=en_US.UTF-8
+
 # Used for a better dialog visualization on putty
 export NCURSES_NO_UTF8_ACS=1
 

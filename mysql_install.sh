@@ -148,7 +148,7 @@ install_mysql_server () {
     sudo unzip ${sw_dir}/${MYSQL}.zip -d ${sw_dir} *.tar.xz
 
     echo "$(date) - INFO - Extract MySQL Enterprise tar on this server" |tee -a ${log_file}
-    cd /mysql
+    sudo cd /mysql
     sudo tar xf ${sw_dir}/*x86_64.tar.xz 
     ERR=$?
     if [ $ERR -ne 0 ]
@@ -159,11 +159,11 @@ install_mysql_server () {
        return $ERR
     fi
 
-    cd /mysql
+    sudo cd /mysql
     sudo mv $( basename -s .tar.xz ${sw_dir}/*x86_64.tar.xz ) ${MYSQL}
 
     echo "$(date) - INFO - Create symbolic link to MySQL Enterprise installation on this server" |tee -a ${log_file}
-    cd /mysql
+    sudo cd /mysql
     sudo ln -s ${MYSQL} mysql-latest
     ERR=$?
     if [ $ERR -ne 0 ]
@@ -176,7 +176,7 @@ install_mysql_server () {
 
     echo "$(date) - INFO - Copy my.cnf for commercial installation on this server" |tee -a ${log_file}
     mycnf="https://github.com/khkwon01/MySQL-setup/raw/main/mycnf/my.cnf"
-    cd /mysql/etc/
+    sudo cd /mysql/etc/
     sudo wget --secure-protocol=auto ${mycnf}
     ERR=$?
     if [ $ERR -ne 0 ]
@@ -244,7 +244,7 @@ install_mysql_server () {
     fi
 
     echo "$(date) - INFO - Download systemctl auto start script" |tee -a ${log_file}
-    cd /mysql
+    sudo cd /mysql
     mystart="https://raw.githubusercontent.com/khkwon01/MySQL-setup/main/systemctl/mysqld-advanced.service"
     sudo wget --secure-protocol=auto ${mystart}
     ERR=$?
@@ -306,7 +306,7 @@ install_mysql_server () {
     rm -f $PFILE
     clear
     echo "$(date) - INFO - Change root password from temp password" |tee -a ${log_file}
-    /mysql/mysql-latest/bin/mysql -uroot -h127.0.0.1 -P3306 --connect-expired-password -p${TMPPASS} -e "ALTER USER root@localhost IDENTIFIED BY '${PASS}'"
+    sudo /mysql/mysql-latest/bin/mysql -uroot -h127.0.0.1 -P3306 --connect-expired-password -p${TMPPASS} -e "ALTER USER root@localhost IDENTIFIED BY '${PASS}'"
     ERR=$?
     if [ $ERR -ne 0 ]
     then

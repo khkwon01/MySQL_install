@@ -606,6 +606,7 @@ echo "$(date) - INFO - Check, and if needed install, pre-requisites" >> ${log_fi
 
 sudo yum -y -q install ncurses-compat-libs dialog wget unzip jq python39-libs 2>&1 >>${log_file}
 sudo mkdir -p ${sw_dir} 2>&1 >>${log_file}
+sudo chown -R $USER ${sw_dir} 2>&1 >>${log_file}
 
 ERR=$?
 if [ $ERR -ne 0 ] ; then

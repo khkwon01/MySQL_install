@@ -1,4 +1,4 @@
-## 1. how to execute   
+## 1. How to execute   
 sh mysql_install_8.0.36.sh
 
 ## 2. Execution screen

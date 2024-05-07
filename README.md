@@ -1,4 +1,4 @@
-## 1. usage env
+## 1. Usage env
 - os : redhat compatibility (> 8)
 
 ## 2. How to execute   

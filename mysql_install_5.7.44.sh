@@ -3,11 +3,16 @@
 
 
 AUTHOR="kihyuk (kwon.kihyuk@oracle.com)"
-VERSION="8.0.36"
+VERSION="5.7.44"
+VERSION_SHELL="8.0.36"
 MYSQL="MySQL_"${VERSION}
-MSHELL="MySQL_Shell_"${VERSION}
+MSHELL="MySQL_Shell_"${VERSION_SHELL}
 
 ERR=0
+
+# Setup general language type
+export LANG=en_US.UTF-8
+
 # Used for a better dialog visualization on putty
 export NCURSES_NO_UTF8_ACS=1
 
@@ -27,10 +32,10 @@ fi
 export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
-export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p36186202_580_Linux-x86-64.zip?aru=25528186&patch_file=p36186202_580_Linux-x86-64.zip'
+export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p35942334_570_Linux-x86-64.zip?aru=25431377&patch_file=p35942334_570_Linux-x86-64.zip'
 export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p36186982_800_Linux-x86-64.zip?aru=25528525&patch_file=p36186982_800_Linux-x86-64.zip'
 
-export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'
+export TEST_DB='https://downloads.mysql.com/docs/sakila-db.tar.gz'
 
 #####################################################
 # FUNCTIONS
@@ -140,12 +145,14 @@ install_mysql_server () {
        return $ERR
     fi
 
-    rm -f ${sw_dir}/*x86_64.tar.xz
-    sudo unzip ${sw_dir}/${MYSQL}.zip -d ${sw_dir} *.tar.xz
+    sudo chown -R mysqluser:mysqlgrp /mysql
+    
+    rm -f ${sw_dir}/*x86_64.tar.gz
+    sudo unzip ${sw_dir}/${MYSQL}.zip -d ${sw_dir} *.tar.gz
 
     echo "$(date) - INFO - Extract MySQL Enterprise tar on this server" |tee -a ${log_file}
     cd /mysql
-    sudo tar xf ${sw_dir}/*x86_64.tar.xz 
+    sudo tar xf ${sw_dir}/*x86_64.tar.gz 
     ERR=$?
     if [ $ERR -ne 0 ]
     then
@@ -156,7 +163,7 @@ install_mysql_server () {
     fi
 
     cd /mysql
-    sudo mv $( basename -s .tar.xz ${sw_dir}/*x86_64.tar.xz ) ${MYSQL}
+    sudo mv $( basename -s .tar.gz ${sw_dir}/*x86_64.tar.gz ) ${MYSQL}
 
     echo "$(date) - INFO - Create symbolic link to MySQL Enterprise installation on this server" |tee -a ${log_file}
     cd /mysql
@@ -171,13 +178,27 @@ install_mysql_server () {
     fi
 
     echo "$(date) - INFO - Copy my.cnf for commercial installation on this server" |tee -a ${log_file}
-    mycnf="https://github.com/khkwon01/MySQL-setup/raw/main/mycnf/my.cnf"
+    mycnf="https://github.com/khkwon01/MySQL-setup/raw/main/mycnf/my57.cnf"
     cd /mysql/etc/
     sudo wget --secure-protocol=auto ${mycnf}
     ERR=$?
     if [ $ERR -ne 0 ]
     then
        msg="error during my.cnf copy into /mysql/etc"
+       display_msg "Server installation" "${msg}"
+       echo "$(date) - ERROR - ${msg}" >> ${log_file}
+       return $ERR
+    fi
+    sudo mv /mysql/etc/my57.cnf /mysql/etc/my.cnf 
+
+    echo "$(date) - INFO - Download systemctl auto start script" |tee -a ${log_file}
+    cd /mysql
+    mystart="https://raw.githubusercontent.com/khkwon01/MySQL-setup/main/systemctl/mysqld-advanced-57.service"
+    sudo wget --secure-protocol=auto ${mystart}
+    ERR=$?
+    if [ $ERR -ne 0 ]
+    then
+       msg="error during download of systemctl mysql script"
        display_msg "Server installation" "${msg}"
        echo "$(date) - ERROR - ${msg}" >> ${log_file}
        return $ERR
@@ -239,21 +260,8 @@ install_mysql_server () {
        return $ERR
     fi
 
-    echo "$(date) - INFO - Download systemctl auto start script" |tee -a ${log_file}
-    cd /mysql
-    mystart="https://raw.githubusercontent.com/khkwon01/MySQL-setup/main/systemctl/mysqld-advanced.service"
-    sudo wget --secure-protocol=auto ${mystart}
-    ERR=$?
-    if [ $ERR -ne 0 ]
-    then
-       msg="error during download of systemctl mysql script"
-       display_msg "Server installation" "${msg}"
-       echo "$(date) - ERROR - ${msg}" >> ${log_file}
-       return $ERR
-    fi
-
     echo "$(date) - INFO - Configure systemd startup for MySQL Enterprise on this server" |tee -a ${log_file}
-    sudo mv /mysql/mysqld-advanced.service /usr/lib/systemd/system/
+    sudo mv /mysql/mysqld-advanced-57.service /usr/lib/systemd/system/mysqld-advanced.service
     sudo chmod 644 /usr/lib/systemd/system/mysqld-advanced.service
     sudo systemctl enable mysqld-advanced.service
     ERR=$?
@@ -302,7 +310,7 @@ install_mysql_server () {
     rm -f $PFILE
     clear
     echo "$(date) - INFO - Change root password from temp password" |tee -a ${log_file}
-    /mysql/mysql-latest/bin/mysql -uroot -h127.0.0.1 -P3306 --connect-expired-password -p${TMPPASS} -e "ALTER USER root@localhost IDENTIFIED BY '${PASS}'"
+    sudo /mysql/mysql-latest/bin/mysql -uroot -h127.0.0.1 -P3306 --connect-expired-password -p${TMPPASS} -e "ALTER USER root@localhost IDENTIFIED BY '${PASS}'"
     ERR=$?
     if [ $ERR -ne 0 ]
     then
@@ -395,7 +403,7 @@ connect_mysql_server () {
     echo "$(date) - INFO - DB INFO - ${msg}" >> ${log_file}
 
     echo "$(date) - INFO - test connectivity for MySQL" >> ${log_file}
-    result=$(/mysql/mysql-latest/bin/mysql -u${DB_USER} -h${DB_IP} -P${DB_PORT} -p${DB_PASS} -e "show databases")
+    result=$(sudo /mysql/mysql-latest/bin/mysql -u${DB_USER} -h${DB_IP} -P${DB_PORT} -p${DB_PASS} -e "show databases")
     ERR=$?
     if [ $ERR -ne 0 ]
     then
@@ -416,17 +424,17 @@ load_data () {
 
     echo "$(date) - INFO - Start function ${FUNCNAME[0]}" >> ${log_file}
 
-    sudo rm -f ${sw_dir}/airportdb.tar.gz
-    echo "$(date) - INFO - Download of airport db... please wait..." >> ${log_file}
-    wget --progress=dot --secure-protocol=auto -O "${sw_dir}/airportdb.tar.gz" ${AIRPORT_DB} 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "Data Download" --gauge "Download airport data from repo" 10 60
+    sudo rm -f ${sw_dir}/sakila-db.tar.gz
+    echo "$(date) - INFO - Download of sakila db... please wait..." >> ${log_file}
+    wget --progress=dot --secure-protocol=auto -O "${sw_dir}/sakila-db.tar.gz" ${TEST_DB} 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "Data Download" --gauge "Download sakila data from repo" 10 60
 
     cd ${sw_dir}
-    sudo rm -rf ${sw_dir}/airport-db
-    sudo tar xf ${sw_dir}/airportdb.tar.gz 
+    sudo rm -rf ${sw_dir}/sakila-db
+    sudo tar xf ${sw_dir}/sakila-db.tar.gz
     DB_DOWNLOAD_STATUS=$?
 
     if [ $DB_DOWNLOAD_STATUS -ne 0 ] ; then
-       msg="ERROR - Error during the download of airport db"
+       msg="ERROR - Error during the download of sakila db"
        echo "$(date) - ${msg}" |tee -a ${log_file}
        display_msg "Download Error" "${msg}"
 
@@ -434,17 +442,23 @@ load_data () {
     fi
 
     clear
-    sudo mysqlsh -uroot -p -- util loadDump ${sw_dir}/airport-db --resetProgress --threads 10 2>&1
+    echo "$(date) - INFO - Loading sakila db... please wait..." |tee -a ${log_file}
+    echo 
+    read -p 'MySQL root password: ' DBPASS
+    sudo /mysql/mysql-latest/bin/mysql -uroot -p${DBPASS} -h 127.0.0.1 < ${sw_dir}/sakila-db/sakila-schema.sql 2>&1 
     ERR=$?
-    if [ $ERR -ne 0 ] ; then
-       msg="ERROR - Error during loading airport db"
+    sudo /mysql/mysql-latest/bin/mysql -uroot -p${DBPASS} -h 127.0.0.1 < ${sw_dir}/sakila-db/sakila-data.sql 2>&1 
+    SUBERR=$?
+    if [ $ERR -ne 0 ] || [ $SUBERR -ne 0 ] 
+    then
+       msg="ERROR - Error during loading sakila db"
        echo "$(date) - ${msg}" |tee -a ${log_file}
        display_msg "Loading Data Error" "${msg}"
 
        return $ERR
     fi   
 
-    display_msg "Download Completed" "The airport db load is completed"
+    display_msg "Download Completed" "The sakila db load is completed"
 
     echo "$(date) - INFO - End function ${FUNCNAME[0]}" >> ${log_file}
 }
@@ -494,6 +508,7 @@ download_software_from_MOS () {
 	stop_execution_for_error $ERR "${msg}"
     fi
 
+    cd ${working_dir}
     # Cookie file for the authentication
     export COOKIE_FILE=$(mktemp  --tmpdir=${working_dir} wget_sh_XXXXXX)
     if [ $? -ne 0 ] || [ -z "$COOKIE_FILE" ]
@@ -530,7 +545,7 @@ download_software_from_MOS () {
     fi
 
     echo "$(date) - INFO - Download of MySQL rpms repo... please wait..." >> ${log_file}
-    wget --progress=dot --load-cookies="$COOKIE_FILE" --save-cookies="$COOKIE_FILE" --keep-session-cookies ${MOS_LINK_SHELL_TAR} -O "${sw_dir}/${MSHELL}.zip" 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "MySQL configuration" --gauge "Download MySQL shell (${VERSION})" 10 60
+    wget --progress=dot --load-cookies="$COOKIE_FILE" --save-cookies="$COOKIE_FILE" --keep-session-cookies ${MOS_LINK_SHELL_TAR} -O "${sw_dir}/${MSHELL}.zip" 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "MySQL configuration" --gauge "Download MySQL shell (${VERSION_SHELL})" 10 60
 
     SHL_RPM_DOWNLOAD_STATUS=$?
     if [ $SHL_RPM_DOWNLOAD_STATUS -ne 0 ] ; then
@@ -597,10 +612,11 @@ test_func () {
 echo "$(date) - INFO - Start" >> ${log_file}
 echo "$(date) - INFO - Script version ${VERSION}" >> ${log_file}
 
-echo "$(date) - INFO - Check, and if needed install, pre-requisites" >> ${log_file}
+echo "$(date) - INFO - Check, and if needed install, install pre-requisites" | tee -a ${log_file}
 
 sudo yum -y -q install ncurses-compat-libs dialog wget unzip jq python39-libs 2>&1 >>${log_file}
 sudo mkdir -p ${sw_dir} 2>&1 >>${log_file}
+sudo chown -R $USER ${sw_dir} 2>&1 >>${log_file}
 
 ERR=$?
 if [ $ERR -ne 0 ] ; then
@@ -624,7 +640,7 @@ if [ $OPTIND -eq 1 ]; then
 		"2" "Install mysql shell" \
 		"3" "Install mysql server" \
 		"4" "Test connectivity of MySQL" \
-		"5" "Load Airport data" \
+		"5" "Load Sakila data" \
 		"9" "This Program test" \
 		2>&1 1>&3)
 
@@ -667,11 +683,11 @@ if [ $OPTIND -eq 1 ]; then
 	        DEL=$?
 	        if [ $DEL -ne 1 ] 
 		then	
-                   systemctl stop mysqld-advanced.service &> /dev/null
-	           systemctl disable mysqld-advanced.service &> /dev/null
-	           userdel mysqluser &> /dev/null
-	           groupdel mysqlgrp &> /dev/null
-	           rm -rf /mysql/  &> /dev/null
+                   sudo systemctl stop mysqld-advanced.service &> /dev/null
+                   sudo systemctl disable mysqld-advanced.service &> /dev/null
+                   sudo userdel mysqluser &> /dev/null
+                   sudo groupdel mysqlgrp &> /dev/null
+                   sudo rm -rf /mysql/  &> /dev/null
 	        fi
             fi
 	    ;;

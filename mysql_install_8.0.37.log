@@ -1,0 +1,29 @@
+Fri May  3 09:49:27 KST 2024 - INFO - Start
+Fri May  3 09:49:27 KST 2024 - INFO - Script version 8.0.37
+Fri May  3 09:49:27 KST 2024 - INFO - Check, and if needed install, install pre-requisites
+Fri May  3 09:49:30 KST 2024 - INFO - Interactive mode
+Fri May  3 09:49:31 KST 2024 - INFO - Start function download_software_from_MOS
+--2024-05-03 09:49:41--  https://updates.oracle.com/Orion/Services/download
+Resolving updates.oracle.com (updates.oracle.com)... 104.76.90.82, 2600:1410:1000:2a5::4425, 2600:1410:1000:29b::4425
+Connecting to updates.oracle.com (updates.oracle.com)|104.76.90.82|:443... connected.
+HTTP request sent, awaiting response... 401 Unauthorized
+Authentication selected: Basic realm=""
+Reusing existing connection to updates.oracle.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 118 [text/plain]
+Saving to: ‘/dev/null’
+
+     0K                                                       100%  220M=0s
+
+2024-05-03 09:49:43 (220 MB/s) - ‘/dev/null’ saved [118/118]
+
+Fri May  3 09:49:43 KST 2024 - INFO - Download of MySQL tar repo... please wait...
+Fri May  3 09:51:30 KST 2024 - INFO - Download of MySQL rpms repo... please wait...
+Fri May  3 09:53:05 KST 2024 - INFO - All downloads completed
+Fri May  3 09:53:05 KST 2024 - INFO - End function download_software_from_MOS
+Fri May  3 10:02:48 KST 2024 - INFO - Interactive menu end
+Tue May  7 10:39:14 KST 2024 - INFO - Start
+Tue May  7 10:39:14 KST 2024 - INFO - Script version 8.0.37
+Tue May  7 10:39:14 KST 2024 - INFO - Check, and if needed install, install pre-requisites
+Tue May  7 10:39:17 KST 2024 - INFO - Interactive mode
+Tue May  7 10:39:19 KST 2024 - INFO - Interactive menu end

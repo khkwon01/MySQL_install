@@ -33,11 +33,14 @@ export sw_dir="${working_dir}/pkg"
 
 export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p36562194_840_Linux-x86-64.zip?aru=25661515&patch_file=p36562194_840_Linux-x86-64.zip'
 export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p36565239_840_Linux-x86-64.zip?aru=25662908&patch_file=p36565239_840_Linux-x86-64.zip'
+<<<<<<< HEAD
 export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.0-linux-glibc2.28-x86_64.tar.xz'
 export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-8.4.0-1.el8.x86_64.rpm'
 export CHK_DL_MYSQL="${sw_dir}/mysql_download_type.lst"
 export PUBLIC_ReleaseNote='https://dev.mysql.com/doc/relnotes/mysql/8.4/en/news-8-4-0.html'
 export KOREA_ReleaseNote='https://github.com/khkwon01/MySQL_install/blob/master/releases/8.4.0.md'
+=======
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
 
 export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'
 
@@ -77,6 +80,7 @@ install_mysql_utilites () {
     # Install MySQL clients
     echo "$(date) - INFO - Install MySQL client and Shell on $client" |tee -a ${log_file}    
 
+<<<<<<< HEAD
     MYSQL_TYPE=`cat ${CHK_DL_MYSQL}`
 
     if [ "${MYSQL_TYPE}" == "commerial" ];
@@ -98,6 +102,21 @@ install_mysql_utilites () {
        sudo yum -y install ${sw_dir}/*shell-${VERSION}-*x86_64.rpm
     fi
 
+=======
+    if [ ! -f "${sw_dir}/${MSHELL}.zip" ]
+    then
+       ERR=1
+       msg="ERROR - Install Err due to not exist ${MSHELL}.zip"
+       echo "$(date) - ${msg}" |tee -a ${log_file}
+       display_msg "Install Error" "${msg}"       
+       return $ERR
+    fi	    
+
+    sudo rm -f ${sw_dir}/*x86_64.rpm
+    sudo unzip "${sw_dir}/${MSHELL}.zip" -d "${sw_dir}/" *x86_64.rpm
+    sudo rm -f ${sw_dir}/*debuginfo*.rpm 
+    sudo yum -y install ${sw_dir}/*.rpm
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
 
     ERR=$?
 
@@ -122,8 +141,11 @@ install_mysql_utilites () {
 install_mysql_server () {
     ERR=0
 
+<<<<<<< HEAD
     MYSQL_TYPE=`cat ${CHK_DL_MYSQL}`
 
+=======
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
     echo "$(date) - INFO - Start $(echo ${FUNCNAME[0]})" |tee -a ${log_file}
 
     echo "$(date) - INFO - Create OS group mysqlgrp on this server" |tee -a ${log_file}
@@ -161,12 +183,17 @@ install_mysql_server () {
 
     sudo chown -R mysqluser:mysqlgrp /mysql
     
+<<<<<<< HEAD
 
     if [ "${MYSQL_TYPE}" == "commerial" ];
     then
        rm -f ${sw_dir}/*x86_64.tar.xz
        sudo unzip ${sw_dir}/${MYSQL}.zip -d ${sw_dir} *.tar.xz
     fi
+=======
+    rm -f ${sw_dir}/*x86_64.tar.xz
+    sudo unzip ${sw_dir}/${MYSQL}.zip -d ${sw_dir} *.tar.xz
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
 
     echo "$(date) - INFO - Extract MySQL Enterprise tar on this server" |tee -a ${log_file}
     cd /mysql
@@ -474,6 +501,7 @@ load_data () {
     echo "$(date) - INFO - End function ${FUNCNAME[0]}" >> ${log_file}
 }
 
+<<<<<<< HEAD
 release_note () {
     echo "$(date) - INFO - Start function ${FUNCNAME[0]}" >> ${log_file}
 
@@ -485,6 +513,8 @@ release_note () {
     echo "$(date) - INFO - End function ${FUNCNAME[0]}" >> ${log_file}
 }
 
+=======
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
 download_software_from_MOS () {
     ERR=0
 
@@ -578,6 +608,7 @@ download_software_from_MOS () {
 
     sudo rm -f "${COOKIE_FILE}"
 
+<<<<<<< HEAD
     echo "commerial" > ${CHK_DL_MYSQL}
 
     echo
@@ -613,6 +644,10 @@ download_software_from_Dev () {
     echo "community" > ${CHK_DL_MYSQL}
 
     echo "$(date) - INFO - All community version downloads completed" |tee -a ${log_file}
+=======
+    echo
+    echo "$(date) - INFO - All downloads completed" |tee -a ${log_file}
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
     echo "$(date) - INFO - End function ${FUNCNAME[0]}" >> ${log_file}
 
     return $ERR
@@ -696,11 +731,17 @@ if [ $OPTIND -eq 1 ]; then
 		"3" "Install mysql server" \
 		"4" "Test connectivity of MySQL" \
 		"5" "Load Airport data" \
+<<<<<<< HEAD
 		"6" "Release Note" \
 		2>&1 1>&3)
 
 	# when test, "9" "This Program test" \
 
+=======
+		"9" "This Program test" \
+		2>&1 1>&3)
+
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
         exit_status=$?
 
         # Close file descriptor 3
@@ -721,6 +762,7 @@ if [ $OPTIND -eq 1 ]; then
 
 	case $selection in
 	1 )
+<<<<<<< HEAD
 	    dialog --title "choose commercial or community" \
 	       --clear \
 	       --yesno "\n\ncommercial version : yes\ncommunity version : no" 10 40
@@ -731,6 +773,9 @@ if [ $OPTIND -eq 1 ]; then
 	    else
 	       download_software_from_Dev
 	    fi
+=======
+	    download_software_from_MOS
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
 	    ;;
         2 ) 
 	    clear
@@ -763,9 +808,12 @@ if [ $OPTIND -eq 1 ]; then
 	5)
             load_data
             ;;
+<<<<<<< HEAD
 	6) 
 	    release_note
 	    ;;
+=======
+>>>>>>> 477adc7e938c2c37ca76d13c46a2ff9befa7bdc9
 	9 ) 
 	    test_func | dialog --backtitle "progress test" --gauge "progress test.." 10 60
 	    #read -p "Press ENTER to continue"

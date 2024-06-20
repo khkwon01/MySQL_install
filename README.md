@@ -1,5 +1,5 @@
 ## 1. MySQL version flow
-![mysql-history-graph](https://github.com/khkwon01/MySQL_install/assets/8789421/506a9503-8be5-40c9-8f99-93b7b2b36a45)
+![mysql-history-graph](https://github.com/khkwon01/MySQL_install/assets/8789421/a972886c-d90e-4c06-9169-87f8c13b299a)
 
 ## 2. Usage env
 - os : redhat compatibility (> 8)

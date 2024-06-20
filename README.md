@@ -2,7 +2,8 @@
 ![mysql-history-graph](https://github.com/khkwon01/MySQL_install/assets/8789421/a972886c-d90e-4c06-9169-87f8c13b299a)
 
 ## 2. Usage env
-- os : redhat compatibility (> 8)
+- os: redhat compatibility (> 8)
+- network: need to public internet because of public package download
 
 ## 3. How to execute   
 sh mysql_install_<install_version>.sh

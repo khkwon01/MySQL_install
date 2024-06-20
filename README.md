@@ -1,4 +1,4 @@
-## 1. MySQL version flow
+## 1. MySQL version release(GA)
 ![mysql-history-graph](https://github.com/khkwon01/MySQL_install/assets/8789421/a972886c-d90e-4c06-9169-87f8c13b299a)
 
 ## 2. Usage env

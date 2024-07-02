@@ -1,5 +1,5 @@
 ## 1. MySQL version release(GA)
-![mysql-history-graph](https://github.com/khkwon01/MySQL_install/assets/8789421/ddeb1c50-c8ca-4900-9042-b5c9adef9101)
+![mysql-history-graph](https://github.com/khkwon01/MySQL_install/assets/8789421/225dace5-8517-4361-8cae-0d361ce2b1a5)
 
 ## 2. Usage env
 - os: redhat compatibility (> 8)

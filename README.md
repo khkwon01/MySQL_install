@@ -1,5 +1,5 @@
 ## 1. MySQL version release(GA)
-![mysql-history-graph](https://github.com/khkwon01/MySQL_install/assets/8789421/225dace5-8517-4361-8cae-0d361ce2b1a5)
+![mysql-history-graph](https://github.com/user-attachments/assets/a85f64d2-0972-4296-b0a3-fd89926da5a3)
 | release type | mean | version | etc |
 |---|:---|:---|---|
 |`LTS`| Long term support (8 years) | 8.0.38, 8.4.1 | bug and security fixes |

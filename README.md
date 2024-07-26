@@ -2,8 +2,8 @@
 ![mysql-history-graph](https://github.com/user-attachments/assets/a85f64d2-0972-4296-b0a3-fd89926da5a3)
 | release type | mean | version | etc |
 |---|:---|:---|---|
-|`LTS`| Long term support (8 years) | 8.0.38, 8.4.1 | bug and security fixes |
-|`Innovation`| Innovation (3 months) | 9.0.0 | bug and security fixes, new features |
+|`LTS`| Long term support (8 years) | 8.0.39, 8.4.2 | bug and security fixes |
+|`Innovation`| Innovation (3 months) | 9.0.1 | bug and security fixes, new features |
 
 ## 2. Usage env
 - os: redhat compatibility (> 8)

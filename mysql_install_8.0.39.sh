@@ -32,7 +32,7 @@ export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
 export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p36866521_580_Linux-x86-64.zip?aru=25759914&patch_file=p36866521_580_Linux-x86-64.zip'
-export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p36566810_800_Linux-x86-64.zip?aru=25663346&patch_file=p36566810_800_Linux-x86-64.zip'
+export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p36790621_800_Linux-x86-64.zip?aru=25736637&patch_file=p36790621_800_Linux-x86-64.zip'
 
 export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'
 

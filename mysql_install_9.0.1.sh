@@ -1,7 +1,6 @@
 #!/bin/sh
 #set -vx
 
-  
 AUTHOR="kihyuk (kwon.kihyuk@oracle.com)"
 VERSION="9.0.1"
 MYSQL="MySQL_"${VERSION}

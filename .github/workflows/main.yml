@@ -17,8 +17,8 @@ jobs:
         with:
           command: 'oci iam compartment list --compartment-id-in-subtree=true'
           query: "data[?name=='mysql-test'].id"
-          silent: True
-          debug: True
+          silent: False  
+        debug: True
       - name: List the display name and shape of the instances in my compartment
         run: |
           echo ${{ steps.find-compartment-id.outputs.raw_output }} | jq .

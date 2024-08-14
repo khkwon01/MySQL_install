@@ -10,13 +10,14 @@ jobs:
       OCI_CLI_FINGERPRINT: ${{ secrets.OCI_CLI_FINGERPRINT }}
       OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
+      compartment-id: ocid1.compartment.oc1..aaaaaaaat7hizmoey6s6y252rrig3kxh3du3z27nlllaefm2x423x6pstbgq
     steps:
-      - name: Retrieve the OCID of a named compartment in tenancy
+      - name: Retrieve the display name and shape of the instances in my compartment
         uses: oracle-actions/run-oci-cli-command@v1.3.1
-        id: find-compartment-id
+        id: find-instances
         with:
-          command: 'oci iam compartment list --compartment-id-in-subtree=true'
-          silent: false  
+          command: 'compute instance list --compartment-id ${{ var.compartment-id }}'
+          query: 'data[*].{name: \"display-name\", shape: shape}'    
       - name: List the display name and shape of the instances in my compartment
         run: |
           echo ${{ steps.find-compartment-id.outputs.raw_output }} | jq .

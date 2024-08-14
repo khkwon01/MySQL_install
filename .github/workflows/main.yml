@@ -1,6 +1,5 @@
 name: oci_run
-on:
-
+on: push
 jobs:
   my-instances:
     runs-on: ubuntu-latest

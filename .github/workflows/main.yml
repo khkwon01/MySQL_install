@@ -1,4 +1,5 @@
 name: oci_run
+on:
 
 jobs:
   my-instances:

@@ -22,7 +22,7 @@ jobs:
         uses: oracle-actions/run-oci-cli-command@v1.3.1
         id: find-instances
         with:
-          command: 'compute instance list --compartment-id ${{ env.compartment-id }}'
+          command: 'compute instance list --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }}'
           query: 'data[*].{name: \"display-name\", shape: shape}'    
       - name: List the display name and shape of the instances in my compartment
         run: |

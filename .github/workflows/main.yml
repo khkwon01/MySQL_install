@@ -1,9 +1,11 @@
 name: deploy
+
 on:
   push:
     paths:
-      - 'deploy/**'
+      - 'deploy*'
   branches: ['master']
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

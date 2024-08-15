@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'deploy*'
-  branches: ['master']
+    branches: ['master']
 
 jobs:
   deploy:

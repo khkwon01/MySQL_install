@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          path: /home/opc/src
           clean: false
       - name: execute remote ssh & deploy 
         uses: appleboy/ssh-action@master

@@ -21,4 +21,4 @@ jobs:
           port: ${{ secrets.REMOTE_SSH_PORT }}        
           script: |
             ls -al
-            sudo git pull origin master
+            sudo gh repo clone khkwon01/MySQL_install

@@ -4,7 +4,8 @@ on:
     paths:
       - 'deploy*'
     branches: ['master']
-
+  label:
+    types: [created, edited]
 jobs:
   deploy:
     runs-on: ubuntu-latest

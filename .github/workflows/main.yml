@@ -16,5 +16,6 @@ jobs:
           key: ${{ secrets.REMOTE_SSH_KEY }}
           port: ${{ secrets.REMOTE_SSH_PORT }}        
           script: |
+            rm -rf MySQL_install/
             git clone https://github.com/khkwon01/MySQL_install.git
             ls -al

@@ -12,7 +12,6 @@ jobs:
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
       compartment-name: mysql-test
       availability_domain: AP-SEOUL-1-AD-1
-      subvcn: display-name
     steps:
       - name: Retrieve the OCID of a named compartment in tenancy
         uses: oracle-actions/run-oci-cli-command@v1.3.1
@@ -25,7 +24,7 @@ jobs:
         id: find-subvcn-id
         with:
           command: 'network subnet list --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }}'
-          query: "data[?\"${{ env.subvcn }}\"=='public subnet-mds-vcn'].id"
+          query: "data[?contains(@, 'public subnet-mds-vcn') == `true`].id"
       - name: Display vcn subnet id
         run: |
           echo ${{ steps.find-compartment-id.outputs.raw_output }}

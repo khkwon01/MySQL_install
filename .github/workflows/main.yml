@@ -25,6 +25,10 @@ jobs:
         with:
           command: 'network subnet list --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }}'
           query: "data[?'display-name'=='public subnet-mds-vcn'].id"
+      - name: Display vcn subnet id
+        run: |
+          echo ${{ steps.find-compartment-id.outputs.raw_output }}
+          echo ${{ steps.find-subvcn-id.outputs.raw_output }}
       - name: Create vm 
         uses: oracle-actions/run-oci-cli-command@v1.3.1
         id: create-vm-id

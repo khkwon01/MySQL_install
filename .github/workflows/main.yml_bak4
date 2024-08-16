@@ -1,7 +1,7 @@
 name: oci_run
 on: push
 jobs:
-  my-instances:
+  build-instances:
     runs-on: ubuntu-latest
     name: List the display name and shape of the instances in my compartment
     env:
@@ -11,6 +11,7 @@ jobs:
       OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
       compartment-name: mysql-test
+      availability_domain: AP-SEOUL-1-AD-1
     steps:
       - name: Retrieve the OCID of a named compartment in tenancy
         uses: oracle-actions/run-oci-cli-command@v1.3.1
@@ -18,12 +19,14 @@ jobs:
         with:
           command: 'iam compartment list --compartment-id-in-subtree=true --all'
           query: "data[?name=='${{ env.compartment-name }}'].id"    
-      - name: Retrieve the display name and shape of the instances in my compartment
+      - name: Retrieve the OCID of public scn
         uses: oracle-actions/run-oci-cli-command@v1.3.1
-        id: find-instances
+        id: find-subvcn-id
         with:
-          command: 'compute instance list --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }}'
-          query: 'data[*].{name: \"display-name\", shape: shape}'    
-      - name: List the display name and shape of the instances in my compartment
-        run: |
-          echo ${{ steps.find-instances.outputs.output }} | jq .
+          command: 'network subnet list --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }}'
+          query: "data[?\"display-name\"=='public subnet-mds-vcn'].id"
+      - name: Create vm 
+        uses: oracle-actions/run-oci-cli-command@v1.3.1
+        id: create-vm-id
+        with:
+          command: 'compute instance launch --availability-domain ${{ env.availability_domain }} --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }} --subnet-id ${{ step.find-subvcn-id.outputs.raw_output }}'

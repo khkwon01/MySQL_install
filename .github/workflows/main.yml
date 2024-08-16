@@ -25,7 +25,7 @@ jobs:
         id: find-subvcn-id
         with:
           command: 'network subnet list --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }}'
-          query: "data[?${{ env.subvcn }}=='public subnet-mds-vcn'].id"
+          query: "data[?\"${{ env.subvcn }}\"=='public subnet-mds-vcn'].id"
       - name: Display vcn subnet id
         run: |
           echo ${{ steps.find-compartment-id.outputs.raw_output }}

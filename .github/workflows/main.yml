@@ -19,7 +19,7 @@ jobs:
         with:
           command: 'iam compartment list --compartment-id-in-subtree=true --all'
           query: "data[?name=='${{ env.compartment-name }}'].id"    
-      - name: Retrieve the OCID of public scn
+      - name: Retrieve the OCID of public subnet
         uses: oracle-actions/run-oci-cli-command@v1.3.1
         id: find-subvcn-id
         with:

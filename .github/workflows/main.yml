@@ -30,3 +30,4 @@ jobs:
         id: create-vm-id
         with:
           command: 'compute instance launch --availability-domain ${{ env.availability_domain }} --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }} --subnet-id ${{ steps.find-subvcn-id.outputs.raw_output }}'
+          silent: False

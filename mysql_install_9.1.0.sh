@@ -31,7 +31,7 @@ export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
 export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37168207_100_Linux-x86-64.zip?aru=25874482&patch_file=p37168207_100_Linux-x86-64.zip'
-export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37168569_100_Linux-x86-64.zip?aru=25874284&patch_file=p37168569_100_Linux-x86-64.zip'
+export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37172126_100_Linux-x86-64.zip?aru=25877043&patch_file=p37172126_100_Linux-x86-64.zip'
 export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-9.1/mysql-9.1.0-linux-glibc2.28-x86_64.tar.xz'
 export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-9.1.0-1.el8.x86_64.rpm'
 export CHK_DL_MYSQL="${sw_dir}/mysql_download_type.lst"

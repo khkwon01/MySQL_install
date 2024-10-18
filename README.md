@@ -1,9 +1,10 @@
 ## 1. MySQL version release(GA)
-![mysql-history-graph](https://github.com/user-attachments/assets/a85f64d2-0972-4296-b0a3-fd89926da5a3)
+![mysql-history-graph](https://github.com/user-attachments/assets/f0930ce3-3f40-47ca-9ac0-35a89af2135f)
+
 | release type | mean | version | etc |
 |---|:---|:---|---|
-|`LTS`| Long term support (8 years) | 8.0.39, 8.4.2 | bug and security fixes |
-|`Innovation`| Innovation (3 months) | 9.0.1 | bug and security fixes, new features |
+|`LTS`| Long term support (8 years) | 8.0.40, 8.4.3 | bug and security fixes |
+|`Innovation`| Innovation (3 months) | 9.1.0 | bug and security fixes, new features |
 
 ## 2. Usage env
 - os: redhat compatibility (> 8)

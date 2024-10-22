@@ -31,7 +31,7 @@ fi
 export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
-export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p36869167_840_Linux-x86-64.zip?aru=25760694&patch_file=p36869167_840_Linux-x86-64.zip'
+export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37168233_840_Linux-x86-64.zip?aru=25874483&patch_file=p37168233_840_Linux-x86-64.zip'
 export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37171564_840_Linux-x86-64.zip?aru=25876300&patch_file=p37171564_840_Linux-x86-64.zip'
 export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.3-linux-glibc2.28-x86_64.tar.xz'
 export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-8.4.3-1.el8.x86_64.rpm'

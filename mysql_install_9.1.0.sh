@@ -35,7 +35,7 @@ export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p3
 export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-9.1/mysql-9.1.0-linux-glibc2.28-x86_64.tar.xz'
 export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-9.1.0-1.el8.x86_64.rpm'
 export CHK_DL_MYSQL="${sw_dir}/mysql_download_type.lst"
-export PUBLIC_ReleaseNote='https://dev.mysql.com/doc/relnotes/mysql/9.1/en/news-9-1-0.html'
+export PUBLIC_ReleaseNote='https://github.com/khkwon01/MySQL_install/blob/master/releases/9.1.0.md'
 export KOREA_ReleaseNote='https://blogs.oracle.com/mysql/post/mysql-91-is-out-thank-you-for-your-contributions'
 
 export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'

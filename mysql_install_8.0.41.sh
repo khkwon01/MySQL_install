@@ -31,8 +31,8 @@ fi
 export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
-export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37167423_580_Linux-x86-64.zip?aru=25874142&patch_file=p37167423_580_Linux-x86-64.zip'
-export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37172762_800_Linux-x86-64.zip?aru=25877020&patch_file=p37172762_800_Linux-x86-64.zip'
+export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37498809_580_Linux-x86-64.zip?aru=26042021&patch_file=p37498809_580_Linux-x86-64.zip'
+export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37499669_800_Linux-x86-64.zip?aru=26042605&patch_file=p37499669_800_Linux-x86-64.zip'
 
 export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'
 

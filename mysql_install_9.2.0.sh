@@ -32,11 +32,11 @@ export sw_dir="${working_dir}/pkg"
 
 export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37168207_100_Linux-x86-64.zip?aru=25874482&patch_file=p37168207_100_Linux-x86-64.zip'
 export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37172126_100_Linux-x86-64.zip?aru=25877043&patch_file=p37172126_100_Linux-x86-64.zip'
-export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-9.1/mysql-9.1.0-linux-glibc2.28-x86_64.tar.xz'
-export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-9.1.0-1.el8.x86_64.rpm'
+export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-9.2/mysql-9.2.0-linux-glibc2.28-x86_64.tar.xz'
+export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-9.2.0-1.el8.x86_64.rpm'
 export CHK_DL_MYSQL="${sw_dir}/mysql_download_type.lst"
-export PUBLIC_ReleaseNote='https://dev.mysql.com/doc/relnotes/mysql/9.1/en/news-9-1-0.html, https://blogs.oracle.com/mysql/post/mysql-91-is-out-thank-you-for-your-contributions'
-export KOREA_ReleaseNote='https://github.com/khkwon01/MySQL_install/blob/master/releases/9.1.0.md'
+export PUBLIC_ReleaseNote='https://dev.mysql.com/doc/relnotes/mysql/9.2/en/news-9-2-0.html'
+export KOREA_ReleaseNote='https://github.com/khkwon01/MySQL_install/blob/master/releases/9.2.0.md'
 export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'
 
 #####################################################

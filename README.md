@@ -3,8 +3,8 @@
 
 | release type | mean | version | etc |
 |---|:---|:---|---|
-|`LTS`| Long term support (8 years) | 8.0.40, 8.4.3 | bug and security fixes |
-|`Innovation`| Innovation (3 months) | 9.1.0 | bug and security fixes, new features |
+|`LTS`| Long term support (8 years) | 8.0.41, 8.4.4 | bug and security fixes |
+|`Innovation`| Innovation (3 months) | 9.2.0 | bug and security fixes, new features |
 
 ## 2. Usage env
 - os: redhat compatibility (> 8)

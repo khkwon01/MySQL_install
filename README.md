@@ -1,5 +1,5 @@
 ## 1. MySQL version release(GA)
-![mysql-history-graph](https://github.com/user-attachments/assets/d5768b5e-edfa-42f5-862f-c9f09f649652)
+![mysql-history-graph](https://github.com/user-attachments/assets/ff967823-1e58-4bf5-84e8-928282d506ce)
 
 | release type | mean | version | etc |
 |---|:---|:---|---|

@@ -12,7 +12,8 @@ try {
 	showProgress: true,
         ocimds: true, // Enable OCI MDS metadata
 	//consistent: false,  // consistent lock disable
-	compatibility: ["strip_definers", "strip_restricted_grants", "ignore_missing_pks"]
+	//compatibility: ["strip_definers", "strip_restricted_grants", "ignore_missing_pks"],  //pks 없는 에러 무시
+	compatibility: ["strip_definers", "strip_restricted_grants", "create_invisible_pks", "force_innodb","skip_invalid_accounts","strip_tablespaces"]
     });
     
     // If successful, print a confirmation message

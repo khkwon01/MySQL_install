@@ -9,12 +9,14 @@ shell.setSession(session);
 try {
     util.loadDump('./qbdump', {
         threads: 2,
-	      dryrun: true,    // change from true to false in exeution
+	dryrun: true,    // change from true to false in exeution
         resetProgress: true,
         ignoreVersion: true,
-	      createInvisiblePKs: true,
-	      ignoreExistingObjects: true,
-	      deferTableIndexes: 'all'
+	// createInvisiblePKs: true,  //invisible pk 생성시
+	ignoreExistingObjects: true,
+	deferTableIndexes: 'all'
+	// excludeSchemas:["AutoML","ragdb"],
+	// excludeTables:["airport.passenger_survey"]
     });
 
     // If successful, print a confirmation message

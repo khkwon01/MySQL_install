@@ -31,8 +31,10 @@ fi
 export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
-export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37496949_840_Linux-x86-64.zip?aru=26041255&patch_file=p37496949_840_Linux-x86-64.zip'
-export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37500282_840_Linux-x86-64.zip?aru=26043339&patch_file=p37500282_840_Linux-x86-64.zip'
+# MySQL Commercial Server 8.4.x TAR for Generic Linux (glibc2.28) x86 (64bit) 
+export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37827108_840_Linux-x86-64.zip?aru=27120887&patch_file=p37827108_840_Linux-x86-64.zip'
+# MySQL Shell 8.4.x RPM for Oracle Linux
+export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37832548_840_Linux-x86-64.zip?aru=27123632&patch_file=p37832548_840_Linux-x86-64.zip'
 export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.5-linux-glibc2.28-x86_64.tar.xz'
 export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-8.4.5-1.el8.x86_64.rpm'
 export CHK_DL_MYSQL="${sw_dir}/mysql_download_type.lst"

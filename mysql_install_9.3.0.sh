@@ -30,8 +30,8 @@ fi
 export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
-export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37497450_100_Linux-x86-64.zip?aru=26041335&patch_file=p37497450_100_Linux-x86-64.zip'
-export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37499924_100_Linux-x86-64.zip?aru=26042669&patch_file=p37499924_100_Linux-x86-64.zip'
+export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37825938_100_Linux-x86-64.zip?aru=27120165&patch_file=p37825938_100_Linux-x86-64.zip'
+export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37830676_100_Linux-x86-64.zip?aru=27122501&patch_file=p37830676_100_Linux-x86-64.zip'
 export DEV_LINK_SRV_TAR='https://dev.mysql.com/get/Downloads/MySQL-9.3/mysql-9.3.0-linux-glibc2.28-x86_64.tar.xz'
 export DEV_LINK_SHELL_TAR='https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-9.3.0-1.el8.x86_64.rpm'
 export CHK_DL_MYSQL="${sw_dir}/mysql_download_type.lst"
@@ -590,6 +590,7 @@ download_software_from_Dev () {
 
     echo "$(date) - INFO - Start function ${FUNCNAME[0]}" >> ${log_file}
 
+    rm -f ${sw_dir}/*x86_64.tar.xz
     wget --progress=dot $DEV_LINK_SRV_TAR -O "${sw_dir}/`basename $DEV_LINK_SRV_TAR`" 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "MySQL configuration" --gauge "Download MySQL binary tar (community ${VERSION})" 10 60
 
     SRV_TAR_PKG_DOWNLOAD_STATUS=$?

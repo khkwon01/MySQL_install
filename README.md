@@ -3,8 +3,10 @@
 
 | release type | mean | version | etc |
 |---|:---|:---|---|
-|`LTS`| Long term support (8 years) | 8.0.41, 8.4.4 | bug and security fixes |
-|`Innovation`| Innovation (3 months) | 9.2.0 | bug and security fixes, new features |
+|`LTS`| Long term support (8 years) | 8.0.42, 8.4.5 | bug and security fixes |
+|`Innovation`| Innovation (3 months) | 9.3.0 | bug and security fixes, new features |
+
+- MySQL 8.0.x version will be end of life at 2026.
 
 ## 2. Usage env
 - os: redhat compatibility (> 8)

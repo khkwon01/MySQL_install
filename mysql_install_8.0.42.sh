@@ -31,8 +31,10 @@ fi
 export log_file="${working_dir}/$(basename -s .sh $0).log"
 export sw_dir="${working_dir}/pkg"
 
-export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37498637_580_Linux-x86-64.zip?aru=26042231&patch_file=p37498637_580_Linux-x86-64.zip'
-export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37500282_840_Linux-x86-64.zip?aru=26043339&patch_file=p37500282_840_Linux-x86-64.zip'
+# MySQL Commercial Server 8.0.x TAR for Generic Linux (glibc2.28) x86 (64bit) 
+export MOS_LINK_SRV_TAR='https://updates.oracle.com/Orion/Services/download/p37825584_580_Linux-x86-64.zip?aru=27120354&patch_file=p37825584_580_Linux-x86-64.zip'
+# x86 rpm file
+export MOS_LINK_SHELL_TAR='https://updates.oracle.com/Orion/Services/download/p37832548_840_Linux-x86-64.zip?aru=27123632&patch_file=p37832548_840_Linux-x86-64.zip'
 
 export AIRPORT_DB='https://downloads.mysql.com/docs/airport-db.tar.gz'
 

@@ -593,6 +593,7 @@ download_software_from_Dev () {
 
     echo "$(date) - INFO - Start function ${FUNCNAME[0]}" >> ${log_file}
 
+    rm -f ${sw_dir}/*x86_64.tar.xz
     wget --progress=dot $DEV_LINK_SRV_TAR -O "${sw_dir}/`basename $DEV_LINK_SRV_TAR`" 2>&1 | stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | dialog --backtitle "MySQL configuration" --gauge "Download MySQL binary tar (community ${VERSION})" 10 60
 
     SRV_TAR_PKG_DOWNLOAD_STATUS=$?

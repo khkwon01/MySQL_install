@@ -3,7 +3,7 @@
 
 
 AUTHOR="kihyuk (kwon.kihyuk@oracle.com)"
-VERSION="8.0.41"
+VERSION="8.0.42"
 MYSQL="MySQL_"${VERSION}
 MSHELL="MySQL_Shell_"${VERSION}
 
